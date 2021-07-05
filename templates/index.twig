@@ -9,70 +9,10 @@
     <link rel="stylesheet" href="{{ siteUrl }}assets/css/theme.min.css">
 </head>
 <body class="ltr">
-<!-- Hero Section -->
-<div class="container space-top-3 space-top-lg-4 space-bottom-2 space-bottom-lg-3">
-  <div class="row justify-content-lg-between mb-7">
-    <div class="col-md-6 col-lg-5">
-      <!-- Info -->
-      <div class="mb-5">
-        <h1>Build awesome apps with your web skills</h1>
-        <p>Built on standard web technology, teams use Front to build beautiful cross-platform hybrid apps in a fraction of the time.</p>
-      </div>
 
-      <div class="mb-3">
-        <a class="btn btn-primary btn-wide transition-3d-hover mb-2 mb-sm-0 mr-3" href="#">Get Started</a>
-        <a class="btn btn-link mb-2 mb-sm-0" href="#">Let's Talk <i class="fas fa-angle-right fa-sm ml-1"></i></a>
-      </div>
-
-      <p class="small">Start free trial. * No credit card required.</p>
-      <!-- End Info -->
-    </div>
-
-    <div class="col-md-6 d-none d-md-inline-block">
-      <!-- SVG Illustration -->
-      <figure class="w-100">
-        <img class="img-fluid" src="{{ siteUrl }}assets/svg/illustrations/hiker-man.svg" alt="Image Description">
-      </figure>
-      <!-- End SVG Illustration -->
-    </div>
-  </div>
-
-  <!-- Clients -->
-  <div class="row justify-content-between text-center">
-    <div class="col-4 col-lg-2 mb-5 mb-lg-0">
-      <div class="mx-3">
-        <img class="max-w-11rem max-w-md-13rem mx-auto" src="{{ siteUrl }}assets/svg/clients-logo/boring-company.svg" alt="Image Description">
-      </div>
-    </div>
-    <div class="col-4 col-lg-2 mb-5 mb-lg-0">
-      <div class="mx-3">
-        <img class="max-w-11rem max-w-md-13rem mx-auto" src="{{ siteUrl }}assets/svg/clients-logo/netflix.svg" alt="Image Description" >
-      </div>
-    </div>
-    <div class="col-4 col-lg-2 mb-5 mb-lg-0">
-      <div class="mx-3">
-        <img class="max-w-11rem max-w-md-13rem mx-auto" src="{{ siteUrl }}assets/svg/clients-logo/fitbit.svg" alt="Image Description">
-      </div>
-    </div>
-    <div class="col-4 col-lg-2">
-      <div class="mx-3">
-        <img class="max-w-11rem max-w-md-13rem mx-auto" src="{{ siteUrl }}assets/svg/clients-logo/google.svg" alt="Image Description">
-      </div>
-    </div>
-    <div class="col-4 col-lg-2">
-      <div class="mx-3">
-        <img class="max-w-11rem max-w-md-13rem mx-auto" src="{{ siteUrl }}assets/svg/clients-logo/airbnb.svg" alt="Image Description">
-      </div>
-    </div>
-    <div class="col-4 col-lg-2">
-      <div class="mx-3">
-        <img class="max-w-11rem max-w-md-13rem mx-auto" src="{{ siteUrl }}assets/svg/clients-logo/uber.svg" alt="Image Description">
-      </div>
-    </div>
-  </div>
-  <!-- End Clients -->
-</div>
-<!-- End Hero Section -->
+    {% block content %}
+        {# #}
+    {% endblock %}
 
 </body>
 </html>
