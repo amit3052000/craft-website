@@ -1,34 +1,6 @@
-<!DOCTYPE html>
-<html lang="en-US">
-<head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta charset="utf-8" />
-    <title>Welcome to Craft CMS</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
-    <meta name="referrer" content="origin-when-cross-origin" />
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ siteUrl }}assets/css/theme.min.css">
-    <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.css">
-    <link rel="stylesheet" href="{{ siteUrl }}assets/vendor/hs-megamenu/src/hs.megamenu.css">
+{# {% extends "index" %
 
-    <script src="{{ siteUrl }}assets/js/components/hs.header.js"></script>
-    <script src="{{ siteUrl }}assets/vendor/hs-megamenu/src/hs.megamenu.js"></script>
-
-    <!-- JS Plugins Init. -->
-    <script>
-        $(document).on('ready', function () {
-        // INITIALIZATION OF HEADER
-        // =======================================================
-        var header = new HSHeader($('#header')).init();
-
-
-        // INITIALIZATION OF MEGA MENU
-        // =======================================================
-        var megaMenu = new HSMegaMenu($('.js-mega-menu')).init();
-      });
-    </script>
-</head>
-<body class="ltr">
+{% block header %}
 
     <!-- ========== HEADER ========== -->
 <header id="header" class="header header-bg-transparent-lg header-white-nav-links-lg header-abs-top-lg"
@@ -42,13 +14,13 @@
       <nav class="js-mega-menu navbar navbar-expand-lg">
         <!-- White Logo -->
         <a class="navbar-brand navbar-brand-default" href="#" aria-label="Front">
-          <img src="{{ siteUrl }}assets/svg/logos/logo-white.svg" alt="Logo">
+          <img src="../../assets/svg/logos/logo-white.svg" alt="Logo">
         </a>
         <!-- End White Logo -->
 
         <!-- Default Logo -->
         <a class="navbar-brand navbar-brand-collapsed" href="#" aria-label="Front">
-          <img src="{{ siteUrl }}assets/svg/logos/logo.svg" alt="Logo">
+          <img src="../../assets/svg/logos/logo.svg" alt="Logo">
         </a>
         <!-- End Default Logo -->
 
@@ -515,8 +487,4 @@
 </header>
 <!-- ========== END HEADER ========== -->
 
-    {% block content %}
-        {# #}
-    {% endblock %}
-</body>
-</html>
+{% endblock %} #}
