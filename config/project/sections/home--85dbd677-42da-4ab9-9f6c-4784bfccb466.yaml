@@ -6,6 +6,6 @@ siteSettings:
   d5f1d19a-569c-4bd6-9599-42df2dce89f8: # new craft
     enabledByDefault: true
     hasUrls: true
-    template: layouts\header
+    template: index
     uriFormat: __home__
 type: single
