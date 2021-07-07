@@ -1,4 +1,4 @@
-
+{% set hero_section=craft.entries().section('hero').one() %}
 
 <!-- Hero Section -->
 <div class="container space-top-3 space-top-lg-4 space-bottom-2 space-bottom-lg-3">
@@ -6,8 +6,8 @@
     <div class="col-md-6 col-lg-5">
       <!-- Info -->
       <div class="mb-5">
-        <h1>Build awesome apps with your web skills</h1>
-        <p>Built on standard web technology, teams use Front to build beautiful cross-platform hybrid apps in a fraction of the time.</p>
+        <h1>{{ hero_section.richText }}</h1>
+        <p>{{ hero_section.heroDiscription }}</p>
       </div>
 
       <div class="mb-3">
