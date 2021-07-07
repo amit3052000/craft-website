@@ -1,11 +1,11 @@
 enableVersioning: true
-handle: hero
-name: Hero
+handle: home
+name: Home
 propagationMethod: all
 siteSettings:
   d5f1d19a-569c-4bd6-9599-42df2dce89f8: # new craft
     enabledByDefault: true
-    hasUrls: false
-    template: null
-    uriFormat: null
+    hasUrls: true
+    template: layouts\header
+    uriFormat: __home__
 type: single

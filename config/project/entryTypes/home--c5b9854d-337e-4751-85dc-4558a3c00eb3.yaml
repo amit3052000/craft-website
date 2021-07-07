@@ -28,10 +28,10 @@ fieldLayouts:
             width: 100
         name: Content
         sortOrder: 1
-handle: hero
+handle: home
 hasTitleField: true
-name: Hero
-section: 85dbd677-42da-4ab9-9f6c-4784bfccb466 # Hero
+name: Home
+section: 85dbd677-42da-4ab9-9f6c-4784bfccb466 # Home
 sortOrder: 1
 titleFormat: null
 titleTranslationKeyFormat: null
