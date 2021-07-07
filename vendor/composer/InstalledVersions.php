@@ -243,6 +243,15 @@ class InstalledVersions
       ),
       'reference' => 'beff89576a72540ee99476aeb9cfe98222e76fb8',
     ),
+    'ether/seo' => 
+    array (
+      'pretty_version' => '3.7.4',
+      'version' => '3.7.4.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '67ce1f13d5bf33e9bf7453b3fa2cbe5c8d79a6f4',
+    ),
     'ezyang/htmlpurifier' => 
     array (
       'pretty_version' => 'v4.13.0',

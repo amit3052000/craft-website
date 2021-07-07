@@ -885,6 +885,44 @@
             "install-path": "../enshrined/svg-sanitize"
         },
         {
+            "name": "ether/seo",
+            "version": "3.7.4",
+            "version_normalized": "3.7.4.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ethercreative/seo/zipball/67ce1f13d5bf33e9bf7453b3fa2cbe5c8d79a6f4",
+                "reference": "67ce1f13d5bf33e9bf7453b3fa2cbe5c8d79a6f4",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.5.0"
+            },
+            "time": "2021-06-14T11:07:59+00:00",
+            "type": "craft-plugin",
+            "extra": {
+                "handle": "seo",
+                "name": "SEO",
+                "developer": "Ether Creative",
+                "developerUrl": "https://ethercreative.co.uk",
+                "class": "ether\\seo\\Seo"
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "ether\\seo\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "SEO utilities including a unique field type, sitemap, & redirect manager",
+            "support": {
+                "issues": "https://github.com/ethercreative/seo",
+                "docs": "https://github.com/ethercreative/seo/blob/v3/README.md"
+            },
+            "install-path": "../ether/seo"
+        },
+        {
             "name": "ezyang/htmlpurifier",
             "version": "v4.13.0",
             "version_normalized": "4.13.0.0",

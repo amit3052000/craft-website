@@ -21,4 +21,20 @@ return array (
     'developerEmail' => 'support@craftcms.com',
     'documentationUrl' => 'https://github.com/craftcms/redactor/blob/v2/README.md',
   ),
+  'ether/seo' => 
+  array (
+    'class' => 'ether\\seo\\Seo',
+    'basePath' => $vendorDir . '/ether/seo/src',
+    'handle' => 'seo',
+    'aliases' => 
+    array (
+      '@ether/seo' => $vendorDir . '/ether/seo/src',
+    ),
+    'name' => 'SEO',
+    'version' => '3.7.4',
+    'description' => 'SEO utilities including a unique field type, sitemap, & redirect manager',
+    'developer' => 'Ether Creative',
+    'developerUrl' => 'https://ethercreative.co.uk',
+    'documentationUrl' => 'https://github.com/ethercreative/seo/blob/v3/README.md',
+  ),
 );

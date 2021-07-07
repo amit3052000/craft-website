@@ -1,4 +1,4 @@
-dateModified: 1625481330
+dateModified: 1625644450
 email:
   fromEmail: amitkum3052000@gmail.com
   fromName: 'new craft'
@@ -8,6 +8,10 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 2.3.0
+  seo:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.2.0
 system:
   edition: solo
   live: true

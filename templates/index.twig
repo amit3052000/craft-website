@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
+    {% hook "seo" %}
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta charset="utf-8" />
     <title>Welcome to Craft CMS</title>
@@ -85,8 +86,10 @@
 
 </head>
 <body class="ltr">
+     {% block header %}
 
-    <!-- ========== HEADER ========== -->
+     {% endblock %}
+    {# <!-- ========== HEADER ========== -->
 <header id="header" class="header header-bg-transparent-lg header-white-nav-links-lg header-abs-top-lg"
         data-hs-header-options='{
           "fixMoment": 1000,
@@ -569,7 +572,7 @@
     </div>
   </div>
 </header>
-<!-- ========== END HEADER ========== -->
+<!-- ========== END HEADER ========== --> #}
 
     {% block content %}
         {# #}
@@ -983,10 +986,10 @@
 
 
 
+{% include "/partials/nav/footer" %}
 
 
-
-
+{# 
 <!-- ========== FOOTER ========== -->
 <footer class="container space-2">
   <!-- Links -->
@@ -1101,7 +1104,7 @@
   </div>
   <!-- End Copyright -->
 </footer>
-<!-- ========== END FOOTER ========== -->
+<!-- ========== END FOOTER ========== --> #}
 
 </body>
 </html>

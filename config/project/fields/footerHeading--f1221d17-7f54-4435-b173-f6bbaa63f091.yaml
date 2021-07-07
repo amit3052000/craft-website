@@ -1,0 +1,18 @@
+contentColumnType: text
+fieldGroup: 359e12db-890a-44a8-9216-f5b47724e477 # Globals
+handle: footerHeading
+instructions: ''
+name: 'Footer Heading'
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

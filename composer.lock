@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5d2964c5952c991b779cf4ec31c82d93",
+    "content-hash": "44c902c66b4b42ffb27aab83a78873c7",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -835,6 +835,41 @@
             ],
             "description": "An SVG sanitizer for PHP",
             "time": "2021-01-21T10:13:20+00:00"
+        },
+        {
+            "name": "ether/seo",
+            "version": "3.7.4",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ethercreative/seo/zipball/67ce1f13d5bf33e9bf7453b3fa2cbe5c8d79a6f4",
+                "reference": "67ce1f13d5bf33e9bf7453b3fa2cbe5c8d79a6f4",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.5.0"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "handle": "seo",
+                "name": "SEO",
+                "developer": "Ether Creative",
+                "developerUrl": "https://ethercreative.co.uk",
+                "class": "ether\\seo\\Seo"
+            },
+            "autoload": {
+                "psr-4": {
+                    "ether\\seo\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "SEO utilities including a unique field type, sitemap, & redirect manager",
+            "support": {
+                "issues": "https://github.com/ethercreative/seo",
+                "docs": "https://github.com/ethercreative/seo/blob/v3/README.md"
+            },
+            "time": "2021-06-14T11:07:59+00:00"
         },
         {
             "name": "ezyang/htmlpurifier",
