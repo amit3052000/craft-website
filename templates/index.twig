@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="{{ siteUrl }}assets/css/theme.min.css">
     <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.css">
     <link rel="stylesheet" href="{{ siteUrl }}assets/vendor/hs-megamenu/src/hs.megamenu.css">
+    <!-- CSS Implementing Plugins -->
+    <link rel="stylesheet" href="./node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css">
 
     <script src="{{ siteUrl }}assets/js/components/hs.header.js"></script>
     <script src="{{ siteUrl }}assets/vendor/hs-megamenu/src/hs.megamenu.js"></script>
@@ -27,6 +29,60 @@
         var megaMenu = new HSMegaMenu($('.js-mega-menu')).init();
       });
     </script>
+
+
+
+
+
+
+    <!-- JS Implementing Plugins -->
+<script src="./node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js"></script>
+
+<!-- JS Front -->
+<script src="{{ siteUrl }}assests/js/hs.fancybox.js"></script>
+
+<!-- JS Plugins Init. -->
+<script>
+  $(document).on('ready', function () {
+    // INITIALIZATION OF FANCYBOX
+    // =======================================================
+    $('.js-fancybox').each(function () {
+      var fancybox = $.HSCore.components.HSFancyBox.init($(this));
+    });
+  });
+</script>
+
+
+
+
+
+
+
+
+<!-- JS Implementing Plugins -->
+<script src="./node_modules/jquery-validation/dist/jquery.validate.min.js"></script>
+
+<!-- JS Front -->
+<script src="./assets/js/hs.validation.js"></script>
+
+<!-- JS Plugins Init. -->
+<script>
+  $(document).on('ready', function () {
+    // INITIALIZATION OF FORM VALIDATION
+    // =======================================================
+    $('.js-validate').each(function () {
+      var validation = $.HSCore.components.HSValidation.init($(this));
+    });
+  });
+</script>
+
+
+
+
+
+
+
+
 </head>
 <body class="ltr">
 
@@ -84,7 +140,7 @@
                 <div class="row no-gutters">
                   <div class="col-lg-6">
                     <!-- Banner Image -->
-                    <div class="navbar-banner" style="background-image: url(../../assets/img/750x750/img1.jpg);">
+                    <div class="navbar-banner" style="background-image: url(../{{ siteUrl }}assests/img/750x750/img1.jpg);">
                       <div class="navbar-banner-content">
                         <div class="mb-4">
                           <span class="h2 d-block text-white">Branding Works</span>
@@ -291,7 +347,7 @@
                 <!-- Mega Menu Banner -->
                 <div class="navbar-product-banner">
                   <div class="d-flex align-items-end">
-                    <img class="img-fluid mr-4" src="../../assets/img/mockups/img4.png" alt="Image Description">
+                    <img class="img-fluid mr-4" src="../{{ siteUrl }}assests/img/mockups/img4.png" alt="Image Description">
                     <div class="navbar-product-banner-content">
                       <div class="mb-4">
                         <span class="h4 d-block text-primary">Win T-shirt</span>
@@ -326,7 +382,7 @@
                       <div class="navbar-promo-card navbar-promo-item">
                         <a class="navbar-promo-link" href="#">
                           <div class="media align-items-center">
-                            <img class="navbar-promo-icon" src="../../assets/svg/icons/icon-67.svg" alt="SVG">
+                            <img class="navbar-promo-icon" src="../{{ siteUrl }}assests/svg/icons/icon-67.svg" alt="SVG">
                             <div class="media-body">
                               <span class="navbar-promo-title">Education <span class="badge badge-success badge-pill ml-1">New</span></span>
                               <span class="navbar-promo-text">Learn On-demand demo</span>
@@ -340,7 +396,7 @@
                       <div class="navbar-promo-card navbar-promo-item">
                         <a class="navbar-promo-link" href="#">
                           <div class="media align-items-center">
-                            <img class="navbar-promo-icon" src="../../assets/svg/icons/icon-45.svg" alt="SVG">
+                            <img class="navbar-promo-icon" src="../{{ siteUrl }}assests/svg/icons/icon-45.svg" alt="SVG">
                             <div class="media-body">
                               <span class="navbar-promo-title">App Marketplace</span>
                               <span class="navbar-promo-text">Marketplace app demo</span>
@@ -356,7 +412,7 @@
                       <div class="navbar-promo-card navbar-promo-item">
                         <a class="navbar-promo-link" href="#">
                           <div class="media align-items-center">
-                            <img class="navbar-promo-icon" src="../../assets/svg/icons/icon-4.svg" alt="SVG">
+                            <img class="navbar-promo-icon" src="../{{ siteUrl }}assests/svg/icons/icon-4.svg" alt="SVG">
                             <div class="media-body">
                               <span class="navbar-promo-title">Help Desk</span>
                               <span class="navbar-promo-text">Help desk demo</span>
@@ -370,7 +426,7 @@
                       <div class="navbar-promo-card navbar-promo-item">
                         <a class="navbar-promo-link disabled" href="#">
                           <div class="media align-items-center">
-                            <img class="navbar-promo-icon" src="../../assets/svg/icons/icon-5.svg" alt="SVG">
+                            <img class="navbar-promo-icon" src="../{{ siteUrl }}assests/svg/icons/icon-5.svg" alt="SVG">
                             <div class="media-body">
                               <span class="navbar-promo-title">Account</span>
                               <span class="navbar-promo-text">Coming soon...</span>
@@ -386,7 +442,7 @@
                       <div class="navbar-promo-card navbar-promo-item">
                         <a class="navbar-promo-link disabled" href="#">
                           <div class="media align-items-center">
-                            <img class="navbar-promo-icon" src="../../assets/svg/icons/icon-19.svg" alt="SVG">
+                            <img class="navbar-promo-icon" src="../{{ siteUrl }}assests/svg/icons/icon-19.svg" alt="SVG">
                             <div class="media-body">
                               <span class="navbar-promo-title">Job</span>
                               <span class="navbar-promo-text">Coming soon...</span>
@@ -400,7 +456,7 @@
                       <div class="navbar-promo-card navbar-promo-item">
                         <a class="navbar-promo-link disabled" href="#">
                           <div class="media align-items-center">
-                            <img class="navbar-promo-icon" src="../../assets/svg/icons/icon-13.svg" alt="SVG">
+                            <img class="navbar-promo-icon" src="../{{ siteUrl }}assests/svg/icons/icon-13.svg" alt="SVG">
                             <div class="media-body">
                               <span class="navbar-promo-title">House</span>
                               <span class="navbar-promo-text">Coming soon...</span>
@@ -416,7 +472,7 @@
                   <div class="col-lg-4 navbar-promo d-none d-lg-block">
                     <a class="d-block navbar-promo-inner" href="#">
                       <div class="position-relative">
-                        <img class="img-fluid rounded mb-3" src="../../assets/img/380x227/img1.jpg" alt="Image Description">
+                        <img class="img-fluid rounded mb-3" src="../{{ siteUrl }}assests/img/380x227/img1.jpg" alt="Image Description">
                       </div>
                       <span class="navbar-promo-text font-size-1">Front makes you look at things from a different perspectives.</span>
                     </a>
@@ -444,7 +500,7 @@
                 <div class="navbar-promo-item">
                   <a class="navbar-promo-link" href="#">
                     <div class="media align-items-center">
-                      <img class="navbar-promo-icon" src="../../assets/svg/icons/icon-2.svg" alt="SVG">
+                      <img class="navbar-promo-icon" src="../{{ siteUrl }}assests/svg/icons/icon-2.svg" alt="SVG">
                       <div class="media-body">
                         <span class="navbar-promo-title">
                           Documentation
@@ -461,7 +517,7 @@
                 <div class="navbar-promo-item">
                   <a class="navbar-promo-link" href="#">
                     <div class="media align-items-center">
-                      <img class="navbar-promo-icon" src="../../assets/svg/icons/icon-1.svg" alt="SVG">
+                      <img class="navbar-promo-icon" src="../{{ siteUrl }}assests/svg/icons/icon-1.svg" alt="SVG">
                       <div class="media-body">
                         <span class="navbar-promo-title">Start Building</span>
                         <small class="navbar-promo-text">Coming soon...</small>
@@ -518,5 +574,534 @@
     {% block content %}
         {# #}
     {% endblock %}
+
+<!-- About Section -->
+<div class="container">
+  <h3>About the company</h3>
+
+  <div class="row mb-5">
+    <div class="col-md-3 order-md-2 mb-3 mb-md-0">
+      <div class="pl-md-4">
+        <ul class="list-unstyled list-article">
+          <li>
+            <span class="h5 d-block">Founded</span>
+            <span class="d-block font-size-1">2009</span>
+          </li>
+
+          <li>
+            <span class="h5 d-block">Company size</span>
+            <span class="d-block font-size-1">150 - 300</span>
+          </li>
+
+          <li>
+            <span class="h5 d-block">Avg. Salary</span>
+            <span class="d-block font-size-1">$25 - $45</span>
+          </li>
+
+          <li>
+            <span class="h5 d-block">Industry</span>
+            <span class="d-block font-size-1">Information Technology</span>
+          </li>
+
+          <li>
+            <span class="h5 d-block">Links</span>
+
+            <ul class="list-inline">
+              <li class="list-inline-item">
+                <a class="icon icon-xs icon-soft-dark icon-circle" href="#" data-toggle="tooltip" data-placement="top" title="Capsule on Facebook">
+                  <i class="fab fa-facebook"></i>
+                </a>
+              </li>
+
+              <li class="list-inline-item">
+                <a class="icon icon-xs icon-soft-dark icon-circle" href="#" data-toggle="tooltip" data-placement="top" title="Capsule on Twitter">
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </li>
+
+              <li class="list-inline-item">
+                <a class="icon icon-xs icon-soft-dark icon-circle" href="#" data-toggle="tooltip" data-placement="top" title="Capsule on Github">
+                  <i class="fab fa-github"></i>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="col-md-9">
+      <div class="mb-5">
+        <p>Capsule was launched in 2009 following the founders' frustration with existing CRM services that were either overly simplistic or far too complex for most businesses. We believe the value of a modern CRM lies in the ability to help businesses stay organized, know more about their customers, build strong relationships and to make the most of sales opportunities, all while minimizing user input. We built Capsule to deliver on these values and today Capsule is used by thousands of businesses of all sizes all over the world.</p>
+
+        <div class="collapse" id="collapseLinkDescription">
+          <p>We're based in Manchester, United Kingdom, a city with a creative heart that was founded on science and industry and the birthplace of the modern computer.</p>
+        </div>
+
+        <a class="link-collapse" data-toggle="collapse" href="#collapseLinkDescription" role="button" aria-expanded="false" aria-controls="collapseLinkDescription">
+          <span class="link-collapse-default">Read more <i class="fas fa-angle-down fa-sm ml-1"></i></span>
+          <span class="link-collapse-active">Read less <i class="fas fa-angle-up fa-sm ml-1"></i></span>
+        </a>
+      </div>
+
+      <div id="fancyboxGallery">
+        <div class="row mx-n2">
+          <div class="col-4 col-sm px-2 mb-3 mb-sm-0">
+            <a class="js-fancybox media-viewer" href="javascript:;"
+               data-hs-fancybox-options='{
+                 "selector": "#fancyboxGallery .js-fancybox",
+                 "speed": 700
+               }'
+               data-src="{{ siteUrl }}assests/img/900x900/img1.jpg"
+               data-caption="Front in frames - image #01">
+              <img class="img-fluid rounded" src="{{ siteUrl }}assets/img/900x900/img1.jpg" alt="Image Description">
+
+              <span class="media-viewer-container">
+                <span class="media-viewer-icon">
+                  <i class="fas fa-plus media-viewer-icon-inner"></i>
+                </span>
+              </span>
+            </a>
+          </div>
+
+          <div class="col-4 col-sm px-2 mb-3 mb-sm-0">
+            <a class="js-fancybox media-viewer" href="javascript:;"
+               data-hs-fancybox-options='{
+                 "selector": "#fancyboxGallery .js-fancybox",
+                 "speed": 700
+               }'
+               data-src="{{ siteUrl }}assests/img/900x900/img8.jpg"
+               data-caption="Front in frames - image #02">
+              <img class="img-fluid rounded" src="{{ siteUrl }}assests/img/900x900/img8.jpg" alt="Image Description">
+
+              <span class="media-viewer-container">
+                <span class="media-viewer-icon">
+                  <i class="fas fa-plus media-viewer-icon-inner"></i>
+                </span>
+              </span>
+            </a>
+          </div>
+
+          <div class="col-4 col-sm px-2 mb-3 mb-sm-0">
+            <a class="js-fancybox media-viewer" href="javascript:;"
+               data-hs-fancybox-options='{
+                 "selector": "#fancyboxGallery .js-fancybox",
+                 "speed": 700
+               }'
+               data-src="{{ siteUrl }}assests/img/900x900/img7.jpg"
+               data-caption="Front in frames - image #03">
+              <img class="img-fluid rounded" src="{{ siteUrl }}assests/img/900x900/img7.jpg" alt="Image Description">
+
+              <span class="media-viewer-container">
+                <span class="media-viewer-icon">
+                  <i class="fas fa-plus media-viewer-icon-inner"></i>
+                </span>
+              </span>
+            </a>
+          </div>
+
+          <div class="col-4 col-sm px-2 mb-3 mb-sm-0">
+            <a class="js-fancybox media-viewer" href="javascript:;"
+               data-hs-fancybox-options='{
+                 "selector": "#fancyboxGallery .js-fancybox",
+                 "speed": 700
+               }'
+               data-src="{{ siteUrl }}assests/img/900x900/img23.jpg"
+               data-caption="Front in frames - image #04">
+              <img class="img-fluid rounded" src="{{ siteUrl }}assests/img/900x900/img23.jpg" alt="Image Description">
+
+              <span class="media-viewer-container">
+                <span class="media-viewer-icon">
+                  <i class="fas fa-plus media-viewer-icon-inner"></i>
+                </span>
+              </span>
+            </a>
+          </div>
+
+          <div class="col-4 col-sm px-2 mb-3 mb-sm-0">
+            <a class="js-fancybox media-viewer" href="javascript:;"
+               data-hs-fancybox-options='{
+                 "selector": "#fancyboxGallery .js-fancybox",
+                 "speed": 700
+               }'
+               data-src="{{ siteUrl }}assests/img/900x900/img9.jpg"
+               data-caption="Front in frames - image #05">
+              <img class="img-fluid rounded" src="{{ siteUrl }}assests/img/900x900/img9.jpg" alt="Image Description">
+
+              <span class="media-viewer-container">
+                <span class="media-viewer-icon media-viewer-icon-active">
+                  <span class="media-viewer-icon-inner">+1</span>
+                </span>
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <img class="js-fancybox d-none" alt="Image Description"
+             data-hs-fancybox-options='{
+               "selector": "#fancyboxGallery .js-fancybox",
+               "speed": 700
+             }'
+             data-src="{{ siteUrl }}assests/img/900x900/img2.jpg"
+             data-caption="Front in frames - image #06">
+      </div>
+    </div>
+  </div>
+  <!-- End Row -->
+</div>
+<!-- About Section -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Blogs Section -->
+<div class="container">
+  <!-- Title -->
+  <div class="row mb-5">
+    <div class="col-6">
+      <h2 class="h3 mb-0">Latest news</h2>
+    </div>
+    <div class="col-6 text-right">
+      <a class="font-weight-bold" href="#">View all <i class="fas fa-angle-right fa-sm ml-1"></i></a>
+    </div>
+  </div>
+  <!-- End Title -->
+
+  <div class="row mb-3">
+    <div class="col-sm-6 col-lg-4 mb-3 mb-sm-8">
+      <!-- Blog Card -->
+      <article class="card h-100">
+        <div class="card-img-top position-relative">
+          <img class="card-img-top" src="{{ siteUrl }}assests/img/500x280/img1.jpg" alt="Image Description">
+          <figure class="ie-curved-y position-absolute right-0 bottom-0 left-0 mb-n1">
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 1920 100.1">
+              <path fill="#fff" d="M0,0c0,0,934.4,93.4,1920,0v100.1H0L0,0z"/>
+            </svg>
+          </figure>
+        </div>
+
+        <div class="card-body">
+          <h3><a class="text-inherit" href="#">Better is when everything works together</a></h3>
+          <p>Learn how your Google devices can do more.</p>
+        </div>
+
+        <div class="card-footer border-0 pt-0">
+          <div class="media align-items-center">
+            <div class="avatar-group">
+              <a class="avatar avatar-xs avatar-circle" href="#" data-toggle="tooltip" data-placement="top" title="Nataly Gaga">
+                <img class="avatar-img" src="{{ siteUrl }}assests/img/100x100/img1.jpg" alt="Image Description">
+              </a>
+              <a class="avatar avatar-xs avatar-circle" href="#" data-toggle="tooltip" data-placement="top" title="Emily Milda">
+                <img class="avatar-img" src="{{ siteUrl }}assests/img/100x100/img2.jpg" alt="Image Description">
+              </a>
+            </div>
+            <div class="media-body d-flex justify-content-end text-muted font-size-1 ml-2">
+              July 15
+            </div>
+          </div>
+        </div>
+      </article>
+      <!-- End Blog Card -->
+    </div>
+
+    <div class="col-sm-6 col-lg-4 mb-3 mb-sm-8">
+      <!-- Blog Card -->
+      <article class="card bg-dark text-white h-100">
+        <div class="card-body p-4 p-lg-5">
+          <span class="badge badge-primary py-2 px-3 mb-5">Featured</span>
+          <h3 class="h2"><a class="text-white" href="#">Announcing Front Tutorials: Master Adobe Ai - Part II</a></h3>
+          <p>A new tutorial to make it easier to master Adobe Ai.</p>
+        </div>
+        <div class="card-footer bg-dark border-0 pt-0 px-5 pb-5">
+          <div class="media align-items-center">
+            <div class="avatar-group">
+              <a class="avatar avatar-xs avatar-circle" href="#" data-toggle="tooltip" data-placement="top" title="Aaron Larsson">
+                <img class="avatar-img" src="{{ siteUrl }}assests/img/100x100/img3.jpg" alt="Image Description">
+              </a>
+            </div>
+            <div class="media-body d-flex justify-content-end text-white-70 font-size-1 ml-2">
+              July 15
+            </div>
+          </div>
+        </div>
+      </article>
+      <!-- End Blog Card -->
+    </div>
+
+    <div class="col-sm-6 col-lg-4 mb-3 mb-sm-8">
+      <!-- Blog Card -->
+      <article class="card h-100">
+        <div class="card-img-top position-relative">
+          <img class="card-img-top" src="{{ siteUrl }}assests/img/500x280/img3.jpg" alt="Image Description">
+          <figure class="ie-curved-y position-absolute right-0 bottom-0 left-0 mb-n1">
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 1920 100.1">
+              <path fill="#fff" d="M0,0c0,0,934.4,93.4,1920,0v100.1H0L0,0z"/>
+            </svg>
+          </figure>
+        </div>
+
+        <div class="card-body">
+          <h3><a class="text-inherit" href="#">Should You Buy An Apple Pencil?</a></h3>
+          <p>The Apple Pencil is an expensive device that comes with some interesting features, but not everyone needs them.</p>
+        </div>
+
+        <div class="card-footer border-0 pt-0">
+          <div class="media align-items-center">
+            <div class="avatar-group">
+              <a class="avatar avatar-xs avatar-circle" href="#" data-toggle="tooltip" data-placement="top" title="Hanna Wolfe">
+                <img class="avatar-img" src="{{ siteUrl }}assests/img/100x100/img11.jpg" alt="Image Description">
+              </a>
+              <a class="avatar avatar-xs avatar-circle" href="#" data-toggle="tooltip" data-placement="top" title="John O'nolan">
+                <img class="avatar-img" src="{{ siteUrl }}assests/img/100x100/img4.jpg" alt="Image Description">
+              </a>
+            </div>
+            <div class="media-body d-flex justify-content-end text-muted font-size-1 ml-2">
+              July 15
+            </div>
+          </div>
+        </div>
+      </article>
+      <!-- End Blog Card -->
+    </div>
+  </div>
+</div>
+<!-- End Blogs Section -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Contact Form Section -->
+<div class="container space-2">
+  <!-- Title -->
+  <div class="w-md-80 w-lg-50 text-center mx-md-auto mb-5 mb-md-9">
+    <h2>Tell us about yourself</h2>
+    <p>Whether you have questions or you would just like to say hello, contact us.</p>
+  </div>
+  <!-- End Title -->
+
+  <div class="w-lg-80 mx-auto">
+    <!-- Contacts Form -->
+    <form class="js-validate">
+      <div class="row">
+        <!-- Input -->
+        <div class="col-sm-6 mb-4">
+          <div class="js-form-message">
+            <label class="input-label">Your name</label>
+            <input type="text" class="form-control" name="name" placeholder="Jeff Fisher" aria-label="Jeff Fisher" required
+                   data-msg="Please enter your name.">
+          </div>
+        </div>
+        <!-- End Input -->
+
+        <!-- Input -->
+        <div class="col-sm-6 mb-4">
+          <div class="js-form-message">
+            <label class="input-label">Your email address</label>
+            <input type="email" class="form-control" name="email" placeholder="jackwayley@gmail.com" aria-label="jackwayley@gmail.com" required
+                   data-msg="Please enter a valid email address.">
+          </div>
+        </div>
+        <!-- End Input -->
+
+        <div class="w-100"></div>
+
+        <!-- Input -->
+        <div class="col-sm-6 mb-4">
+          <div class="js-form-message">
+            <label class="input-label">Subject</label>
+            <input type="text" class="form-control" name="subject" placeholder="Web design" aria-label="Web design" required
+                   data-msg="Please enter a subject.">
+          </div>
+        </div>
+        <!-- End Input -->
+
+        <!-- Input -->
+        <div class="col-sm-6 mb-4">
+          <div class="js-form-message">
+            <label class="input-label">Your phone number</label>
+            <input type="number" class="form-control" name="phone" placeholder="1-800-643-4500" aria-label="1-800-643-4500" required
+                   data-msg="Please enter a valid phone number.">
+          </div>
+        </div>
+        <!-- End Input -->
+      </div>
+
+      <!-- Input -->
+      <div class="js-form-message mb-6">
+        <label class="input-label">How can we help you?</label>
+        <div class="input-group">
+          <textarea class="form-control" rows="4" name="text" placeholder="Hi there, I would like to ..." aria-label="Hi there, I would like to ..." required
+                    data-msg="Please enter a reason."></textarea>
+        </div>
+      </div>
+      <!-- End Input -->
+
+      <div class="text-center">
+        <button type="submit" class="btn btn-primary btn-wide transition-3d-hover mb-4">Submit</button>
+        <p class="small">We'll get back to you in 1-2 business days.</p>
+      </div>
+    </form>
+    <!-- End Contacts Form -->
+  </div>
+</div>
+<!-- End Contact Form Section -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ========== FOOTER ========== -->
+<footer class="container space-2">
+  <!-- Links -->
+  <div class="row mb-11">
+    <div class="col-md-3 mb-5 mb-md-0">
+      <div class="mb-4">
+        <h5>Get our mobile app</h5>
+      </div>
+
+      <a class="btn btn-icon btn-indigo rounded-circle mr-2" href="#">
+        <i class="fab fa-apple"></i>
+      </a>
+      <a class="btn btn-icon btn-indigo rounded-circle" href="#">
+        <i class="fab fa-google-play"></i>
+      </a>
+    </div>
+
+    <div class="col-sm-4 col-md-3 mb-3 mb-sm-0">
+      <!-- Nav Links -->
+      <ul class="nav nav-sm nav-x-0 flex-column">
+        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Careers <span class="badge badge-success badge-pill ml-1">We're hiring</span></a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Shop with us</a></li>
+      </ul>
+      <!-- End Nav Links -->
+    </div>
+
+    <div class="col-sm-4 col-md-3 mb-3 mb-sm-0">
+      <!-- Nav Links -->
+      <ul class="nav nav-sm nav-x-0 flex-column">
+        <li class="nav-item"><a class="nav-link" href="#">Account</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">My tasks</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Edit profile</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Activity</a></li>
+      </ul>
+      <!-- End Nav Links -->
+    </div>
+
+    <div class="col-sm-4 col-md-3 mb-3 mb-sm-0">
+      <!-- Nav Links -->
+      <ul class="nav nav-sm nav-x-0 flex-column">
+        <li class="nav-item">
+          <a class="nav-link" href="#" target="_blank">
+            Pricing
+            <i class="fas fa-external-link-alt fa-xs ml-1"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" target="_blank">
+            Help
+            <i class="fas fa-external-link-alt fa-xs ml-1"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" target="_blank">
+            Terms & Conditions
+            <i class="fas fa-external-link-alt fa-xs ml-1"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" target="_blank">
+            Privacy & Policy
+            <i class="fas fa-external-link-alt fa-xs ml-1"></i>
+          </a>
+        </li>
+      </ul>
+      <!-- End Nav Links -->
+    </div>
+  </div>
+  <!-- End Links -->
+
+  <!-- Copyright -->
+  <div class="row align-items-sm-center">
+    <div class="col-sm-6 mb-4 mb-sm-0">
+      <p class="small mb-0">© Front. 2020 Htmlstream. All rights reserved.</p>
+    </div>
+
+    <div class="col-sm-6 text-sm-right">
+      <!-- Social Networks -->
+      <ul class="list-inline mb-0">
+        <li class="list-inline-item mb-2 mb-sm-0">
+          <a class="btn btn-xs btn-icon btn-soft-indigo rounded-circle" href="#">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+        </li>
+        <li class="list-inline-item mb-2 mb-sm-0">
+          <a class="btn btn-xs btn-icon btn-soft-indigo rounded-circle" href="#">
+            <i class="fab fa-google"></i>
+          </a>
+        </li>
+        <li class="list-inline-item mb-2 mb-sm-0">
+          <a class="btn btn-xs btn-icon btn-soft-indigo rounded-circle" href="#">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </li>
+        <li class="list-inline-item mb-2 mb-sm-0">
+          <a class="btn btn-xs btn-icon btn-soft-indigo rounded-circle" href="#">
+            <i class="fab fa-github"></i>
+          </a>
+        </li>
+        <li class="list-inline-item mb-2 mb-sm-0">
+          <a class="btn btn-xs btn-icon btn-soft-indigo rounded-circle" href="#">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </li>
+      </ul>
+      <!-- End Social Networks -->
+    </div>
+  </div>
+  <!-- End Copyright -->
+</footer>
+<!-- ========== END FOOTER ========== -->
+
 </body>
 </html>
