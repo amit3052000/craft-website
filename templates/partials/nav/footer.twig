@@ -21,11 +21,12 @@
     <div class="col-sm-4 col-md-3 mb-3 mb-sm-0">
       <!-- Nav Links -->
       <ul class="nav nav-sm nav-x-0 flex-column">
-        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Careers <span class="badge badge-success badge-pill ml-1">We're hiring</span></a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Shop with us</a></li>
+        {% for nav_link in footer_section.navLinks1 %}
+          <li class="nav-item">
+            <a class="nav-link" href="{{ nav_link.navLink1 }}">{{ nav_link.navTitle }}</a>
+          </li>
+        {# <li class="nav-item"><a class="nav-link" href="#">Careers <span class="badge badge-success badge-pill ml-1">We're hiring</span></a></li> #}
+        {% endfor %}
       </ul>
       <!-- End Nav Links -->
     </div>
@@ -33,11 +34,11 @@
     <div class="col-sm-4 col-md-3 mb-3 mb-sm-0">
       <!-- Nav Links -->
       <ul class="nav nav-sm nav-x-0 flex-column">
-        <li class="nav-item"><a class="nav-link" href="#">Account</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">My tasks</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Projects</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Edit profile</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Activity</a></li>
+        {% for nav_link in footer_section.navLinks2 %}
+          <li class="nav-item">
+            <a class="nav-link" href="{{ nav_link.navLink2 }}">{{ nav_link.navTitle }}</a>
+          </li>
+        {% endfor %}
       </ul>
       <!-- End Nav Links -->
     </div>
@@ -84,31 +85,13 @@
     <div class="col-sm-6 text-sm-right">
       <!-- Social Networks -->
       <ul class="list-inline mb-0">
-        <li class="list-inline-item mb-2 mb-sm-0">
-          <a class="btn btn-xs btn-icon btn-soft-indigo rounded-circle" href="#">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-        </li>
-        <li class="list-inline-item mb-2 mb-sm-0">
-          <a class="btn btn-xs btn-icon btn-soft-indigo rounded-circle" href="#">
-            <i class="fab fa-google"></i>
-          </a>
-        </li>
-        <li class="list-inline-item mb-2 mb-sm-0">
-          <a class="btn btn-xs btn-icon btn-soft-indigo rounded-circle" href="#">
-            <i class="fab fa-twitter"></i>
-          </a>
-        </li>
-        <li class="list-inline-item mb-2 mb-sm-0">
-          <a class="btn btn-xs btn-icon btn-soft-indigo rounded-circle" href="#">
-            <i class="fab fa-github"></i>
-          </a>
-        </li>
-        <li class="list-inline-item mb-2 mb-sm-0">
-          <a class="btn btn-xs btn-icon btn-soft-indigo rounded-circle" href="#">
-            <i class="fab fa-linkedin"></i>
-          </a>
-        </li>
+        {% for social_link in footer_section.socialLinks %}
+          <li class="list-inline-item mb-2 mb-sm-0">
+            <a class="btn btn-xs btn-icon btn-soft-indigo rounded-circle" href="{{  social_link.socialLink }}">
+              <i class="{{  social_link.iconclass }}"></i>
+            </a>
+          </li>
+        {% endfor %}
       </ul>
       <!-- End Social Networks -->
     </div>

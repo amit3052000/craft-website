@@ -44,8 +44,48 @@ fieldLayouts:
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
+          -
+            fieldUid: fa989d5a-8e1d-4698-8ba4-8038eeae3311 # Social Links
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
         name: Content
         sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: 60b03e86-f03a-4b51-8ed1-8f609aa7863c # Nav Links 1
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 088a2159-9ef7-4cbd-97d5-a3e9a5fda0cb # Nav Links 2
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: ce0f265c-c320-4b70-b212-bb3e6901f1f0 # Nav Links 3
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: 'Nav Links'
+        sortOrder: 2
 handle: footer
 hasTitleField: false
 name: Footer

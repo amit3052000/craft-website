@@ -1,0 +1,21 @@
+contentColumnType: string
+fieldGroup: dd13b668-050e-4b90-b743-b164aeb1d68c # Navlinks
+handle: navLinks3
+instructions: ''
+name: 'Nav Links 3'
+searchable: true
+settings:
+  allowSelfRelations: false
+  limit: ''
+  localizeRelations: false
+  selectionLabel: ''
+  showSiteMenu: false
+  source: null
+  sources:
+    - 'section:a81dd257-b832-4f63-94e5-4d3deede2e3d' # Nav Links 3
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Entries

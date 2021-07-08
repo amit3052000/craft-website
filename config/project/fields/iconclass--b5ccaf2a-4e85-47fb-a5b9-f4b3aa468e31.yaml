@@ -1,0 +1,18 @@
+contentColumnType: text
+fieldGroup: 53ac96b1-ba2b-47b7-abd9-ca965844d512 # Common
+handle: iconclass
+instructions: ''
+name: iconClass
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

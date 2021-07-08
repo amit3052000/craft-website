@@ -1,0 +1,18 @@
+contentColumnType: text
+fieldGroup: dd13b668-050e-4b90-b743-b164aeb1d68c # Navlinks
+handle: navTitle
+instructions: ''
+name: 'Nav Title'
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText
