@@ -1,0 +1,81 @@
+field: 350c29f3-6541-46c0-9209-dae7e78f1029 # hero contents
+fieldLayouts:
+  4033a171-44b8-4eaa-8b65-7a972f62a1b6:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: fd557920-a0c0-4cbc-a722-83e1320c4934 # image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 3e5c4262-8925-4e2d-a91a-9b658da80129 # image caption
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  3e5c4262-8925-4e2d-a91a-9b658da80129: # image caption
+    contentColumnType: text
+    fieldGroup: null
+    handle: imageCaption
+    instructions: ''
+    name: 'image caption'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  fd557920-a0c0-4cbc-a722-83e1320c4934: # image
+    contentColumnType: string
+    fieldGroup: null
+    handle: image
+    instructions: ''
+    name: image
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowUploads: true
+      allowedKinds: null
+      defaultUploadLocationSource: 'volume:5b42acb9-1fcc-4ac0-8f9b-859724eba742' # Image Discription
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      previewMode: full
+      restrictFiles: ''
+      selectionLabel: ''
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:5b42acb9-1fcc-4ac0-8f9b-859724eba742' # Image Discription
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: false
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+handle: heroImage
+name: 'hero image'
+sortOrder: 1

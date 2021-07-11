@@ -5,7 +5,7 @@ propagationMethod: all
 siteSettings:
   d5f1d19a-569c-4bd6-9599-42df2dce89f8: # new craft
     enabledByDefault: true
-    hasUrls: true
-    template: layouts\hero
-    uriFormat: hero
-type: single
+    hasUrls: false
+    template: null
+    uriFormat: null
+type: channel

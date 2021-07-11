@@ -36,7 +36,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 4ed90a5f-8253-4121-ab99-69d1bff85629 # Hero discription
+            fieldUid: 350c29f3-6541-46c0-9209-dae7e78f1029 # hero contents
             instructions: null
             label: null
             required: false
