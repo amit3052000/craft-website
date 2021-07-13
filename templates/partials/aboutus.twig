@@ -1,41 +1,35 @@
+{% set about = craft.entries().section('aboutUs').one() %}
+
+
+
 <!-- About Section -->
 <div class="container">
-  <h3>About the company</h3>
+  <h3>{{ about.aboutUsHeading }}</h3>
 
   <div class="row mb-5">
     <div class="col-md-3 order-md-2 mb-3 mb-md-0">
       <div class="pl-md-4">
         <ul class="list-unstyled list-article">
           <li>
-            <span class="h5 d-block">Founded</span>
-            <span class="d-block font-size-1">2009</span>
+            {% for block in about.sideBar %}
+              {% switch block.type %}
+                {% case 'sideHead' %}
+                  <span class="h5 d-block">{{ block.heading }}</span>
+                {% case 'sideBottom' %}
+                  <span class="d-block font-size-1">{{ block.bottom }}</span>
+              {% endswitch %}
+            {% endfor %}
           </li>
-
           <li>
-            <span class="h5 d-block">Company size</span>
-            <span class="d-block font-size-1">150 - 300</span>
-          </li>
-
-          <li>
-            <span class="h5 d-block">Avg. Salary</span>
-            <span class="d-block font-size-1">$25 - $45</span>
-          </li>
-
-          <li>
-            <span class="h5 d-block">Industry</span>
-            <span class="d-block font-size-1">Information Technology</span>
-          </li>
-
-          <li>
-            <span class="h5 d-block">Links</span>
 
             <ul class="list-inline">
-              <li class="list-inline-item">
-                <a class="icon icon-xs icon-soft-dark icon-circle" href="#" data-toggle="tooltip" data-placement="top" title="Capsule on Facebook">
-                  <i class="fab fa-facebook"></i>
-                </a>
-              </li>
-
+              {% for social_link in about.socialLinks %}
+                <li class="list-inline-item">
+                  <a class="icon icon-xs icon-soft-dark icon-circle" href="{{  social_link.socialLink }}" data-toggle="tooltip" data-placement="top" title="Capsule on Facebook">
+                    <i class="{{  social_link.iconclass }}"></i>
+                  </a>
+                </li>
+              {% endfor %}
               <li class="list-inline-item">
                 <a class="icon icon-xs icon-soft-dark icon-circle" href="#" data-toggle="tooltip" data-placement="top" title="Capsule on Twitter">
                   <i class="fab fa-twitter"></i>
@@ -56,7 +50,7 @@
     <div class="col-md-9">
       <div class="mb-5">
         <p>Capsule was launched in 2009 following the founders' frustration with existing CRM services that were either overly simplistic or far too complex for most businesses. We believe the value of a modern CRM lies in the ability to help businesses stay organized, know more about their customers, build strong relationships and to make the most of sales opportunities, all while minimizing user input. We built Capsule to deliver on these values and today Capsule is used by thousands of businesses of all sizes all over the world.</p>
-
+        {{ about.aboutUsDiscription	 }}
         <div class="collapse" id="collapseLinkDescription">
           <p>We're based in Manchester, United Kingdom, a city with a creative heart that was founded on science and industry and the birthplace of the modern computer.</p>
         </div>

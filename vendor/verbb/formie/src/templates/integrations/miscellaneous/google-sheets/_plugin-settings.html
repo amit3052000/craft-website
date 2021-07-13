@@ -1,0 +1,70 @@
+{% import '_includes/forms' as forms %}
+{% import 'verbb-base/_macros' as macros %}
+
+{% set instructions %}
+### Connect to the {name} API
+1. Go to the <a href="https://console.cloud.google.com/apis/credentials" target="_blank">Google API Console</a>.
+1. Select an existing project or create a new one.
+1. Go to the **APIs & Services** → **Library**  and enable the **Google Drive API** and **Google Sheets API** for the project.
+1. Next, go to the **APIs & Services** → **Credentials** section.
+1. Click **Create Credentials** → **OAuth client ID**.
+    1. On the following page, select the **Application Type** as **Web application**.
+    1. Provide a suitable **Name** to you can identify it in your Google account. This is not required by Formie.
+    1. Under the **Authorized JavaScript origins**, click **Add URI** and enter your project's Site URL.
+    1. Under the **Authorized redirect URIs**, click **Add URI** and enter the value from the **Redirect URI** field below.
+    1. Then click the **Create** button.
+1. Once created, a popup will appear with your OAuth credentials. Copy the **Client ID** and **Client Secret** values and paste into the fields below.
+{% endset %}
+
+<div class="fui-settings-block">
+    {{ instructions | t('formie', { name: integration.displayName() }) | md }}
+</div>
+
+{{ forms.textField({
+    readonly: true,
+    label: 'Redirect URI' | t('formie'),
+    instructions: 'Use this URI when setting up your {name} app.' | t('formie', { name: integration.displayName() }),
+    value: integration.getRedirectUri(),
+}) }}
+
+{{ forms.lightswitchField({
+    label: 'Proxy Redirect URI' | t('formie'),
+    instructions: 'Whether to proxy the redirect URI through Verbb‘s servers. This should **only** be used for local testing. See [docs](https://verbb.io/craft-plugins/formie/docs/integrations/miscellaneous-integrations#local-testing-proxy) for more.' | t('formie') | md,
+    name: 'proxyRedirect',
+    on: integration.settings.proxyRedirect ?? false,
+    warning: macros.configWarning('proxyRedirect', 'formie'),
+    errors: integration.getErrors('proxyRedirect'),
+}) }}
+
+{{ forms.autosuggestField({
+    label: 'Client ID' | t('formie'),
+    instructions: 'Enter your {name} Client ID key here.' | t('formie', { name: integration.displayName() }),
+    name: 'clientId',
+    required: true,
+    suggestEnvVars: true,
+    value: integration.settings.clientId ?? '',
+    warning: macros.configWarning('clientId', 'formie'),
+    errors: integration.getErrors('clientId'),
+}) }}
+
+{{ forms.autosuggestField({
+    label: 'Client Secret' | t('formie'),
+    instructions: 'Enter your {name} Client Secret here.' | t('formie', { name: integration.displayName() }),
+    name: 'clientSecret',
+    required: true,
+    suggestEnvVars: true,
+    value: integration.settings.clientSecret ?? '',
+    warning: macros.configWarning('clientSecret', 'formie'),
+    errors: integration.getErrors('clientSecret'),
+}) }}
+
+{{ forms.autosuggestField({
+    label: 'Spreadsheet ID' | t('formie'),
+    instructions: 'Enter your {name} Spreadsheet ID here.' | t('formie', { name: integration.displayName() }),
+    name: 'spreadsheetId',
+    required: true,
+    suggestEnvVars: true,
+    value: integration.settings.spreadsheetId ?? '',
+    warning: macros.configWarning('spreadsheetId', 'formie'),
+    errors: integration.getErrors('spreadsheetId'),
+}) }}

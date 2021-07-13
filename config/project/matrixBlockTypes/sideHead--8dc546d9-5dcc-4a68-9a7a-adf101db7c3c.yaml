@@ -1,0 +1,40 @@
+field: e47f99bc-6336-43d8-a073-c32b868b95e6 # side bar
+fieldLayouts:
+  0bcac4e8-993b-4f0f-91ad-a446dcd6f681:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 7942c794-3e4e-4ced-af2b-49426c3a9bc9 # heading
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  7942c794-3e4e-4ced-af2b-49426c3a9bc9: # heading
+    contentColumnType: text
+    fieldGroup: null
+    handle: heading
+    instructions: ''
+    name: heading
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: sideHead
+name: 'side head'
+sortOrder: 1

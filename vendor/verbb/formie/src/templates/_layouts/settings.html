@@ -1,0 +1,33 @@
+{% extends 'formie/_layouts' %}
+
+{% import '_includes/forms' as forms %}
+{% import 'verbb-base/_macros' as macros %}
+
+{% do view.registerAssetBundle('craft\\web\\assets\\admintable\\AdminTableAsset') -%}
+{% do view.registerAssetBundle('verbb\\formie\\web\\assets\\cp\\CpAsset') -%}
+
+{% set crumbs = [
+    { label: craft.formie.getPluginName() | t('formie'), url: url('formie') },
+    { label: 'Settings' | t('app'), url: url('formie/settings') },
+] %}
+
+{% set selectedSubnavItem = 'settings' %}
+{% set selectedTab = selectedTab ?? craft.app.request.getSegment(3) ?? 'general' %}
+
+{% block sidebar %}
+    <nav class="formie-settings-tabs">
+        <ul>
+            {% for handle, item in craft.formie.getSettingsNavItems() %}
+                {% if item.heading is defined %}
+                    <li class="heading"><span>{{ item.heading }}</span></li>
+                {% else %}
+                    <li>
+                        <a href="{{ url('formie/settings/' ~ handle) }}" {% if handle == selectedTab %}class="sel"{% endif %}>
+                            {{ item.title }}
+                        </a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </nav>
+{% endblock %}

@@ -1,0 +1,9 @@
+{% if not (options.hideName ?? false) %}
+    <strong>{{ field.name | t }}</strong><br>
+{% endif %}
+
+{% if field.useRichText %}
+    {{ value | raw }}
+{% else %}
+    {{ value | nl2br }}
+{% endif %}

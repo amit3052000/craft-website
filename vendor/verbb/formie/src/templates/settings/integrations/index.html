@@ -1,0 +1,89 @@
+{% extends 'formie/_layouts/settings' %}
+
+{% block actionButton %}
+    {% if craft.app.config.general.allowAdminChanges %}
+        <a href="{{ url("formie/settings/#{typeName | kebab}/new") }}" class="btn submit add icon">{{ 'New Integration' | t('formie') }}</a>
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+    <div id="integrations-vue-admin-table"></div>
+{% endblock %}
+
+{% set supportsConnection = false %}
+
+{% if integrations | length and integrations[0].supportsConnection() %}
+    {% set supportsConnection = true %}
+{% endif %}
+
+{% set tableData = [] %}
+{% for integration in integrations %}
+    {% set integrationIsMissing = false %}
+
+    {% if integration is missing %}
+        {% set integrationIsMissing = true %}
+    {% endif %}
+
+    {% set tableData = tableData | merge([{
+        id: integration.id,
+        title: integration.getName() | t('site'),
+        url: integration.cpEditUrl,
+        name: integration.getName() | t('site') | e,
+        enabled: integration.enabled,
+        connected: integration.getIsConnected(),
+        type: {
+            isMissing: integrationIsMissing,
+            label: integrationIsMissing ? integration.expectedType : integration.displayName(),
+            icon: integration.getIconUrl(),
+        },
+    }]) %}
+{% endfor %}
+
+{% js %}
+
+var columns = [
+    { name: '__slot:title', title: Craft.t('app', 'Name') },
+    { name: 'type', title: Craft.t('app', 'Type'), callback: function(value) {
+            if (value.isMissing) {
+                return '<span class="error">' + value.label + '</span>';
+            }
+
+            return '<div style="display: flex; align-items: center;">' + 
+                '<img src="' + value.icon + '" style="width: 20px; height: 20px; margin-right: 8px;">' + 
+                value.label
+            '</div>';
+        }
+    },
+    { name: 'enabled', title: Craft.t('formie', 'Enabled'), callback: function(value) {
+            if (value) {
+                return '<span class="status on"></span>' + Craft.t('formie', 'Enabled');
+            } else {
+                return '<span class="status"></span>' + Craft.t('formie', 'Disabled');
+            }
+        }
+    },
+    {% if supportsConnection %}
+        { name: 'connected', title: Craft.t('formie', 'Connected'), callback: function(value) {
+                if (value) {
+                    return '<span class="status on"></span>' + Craft.t('formie', 'Connected');
+                } else {
+                    return '<span class="status"></span>' + Craft.t('formie', 'Not connected');
+                }
+            }
+        },
+    {% endif %}
+];
+
+new Craft.VueAdminTable({
+    columns: columns,
+    container: '#integrations-vue-admin-table',
+    emptyMessage: Craft.t('formie', 'No integrations exist yet.'),
+    tableData: {{ tableData | json_encode | raw }},
+
+    {% if craft.app.config.general.allowAdminChanges %}
+        deleteAction: 'formie/integrations/delete-integration',
+        reorderAction: '{{ integrations | length > 1 ? 'formie/integrations/reorder-integrations' : ''}}',
+    {% endif %}
+});
+
+{% endjs %}

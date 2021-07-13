@@ -37,4 +37,22 @@ return array (
     'developerUrl' => 'https://ethercreative.co.uk',
     'documentationUrl' => 'https://github.com/ethercreative/seo/blob/v3/README.md',
   ),
+  'verbb/formie' => 
+  array (
+    'class' => 'verbb\\formie\\Formie',
+    'basePath' => $vendorDir . '/verbb/formie/src',
+    'handle' => 'formie',
+    'aliases' => 
+    array (
+      '@verbb/formie' => $vendorDir . '/verbb/formie/src',
+    ),
+    'name' => 'Formie',
+    'version' => '1.4.9',
+    'description' => 'The most user-friendly forms plugin for Craft.',
+    'developer' => 'Verbb',
+    'developerUrl' => 'https://verbb.io',
+    'developerEmail' => 'support@verbb.io',
+    'documentationUrl' => 'https://github.com/verbb/formie',
+    'changelogUrl' => 'https://raw.githubusercontent.com/verbb/formie/craft-3/CHANGELOG.md',
+  ),
 );

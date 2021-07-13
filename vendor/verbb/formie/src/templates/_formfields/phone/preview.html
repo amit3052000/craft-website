@@ -1,0 +1,9 @@
+<div>
+    <div v-if="field.settings.countryEnabled" class="fui-phone-flag-wrap" >
+        <span class="fui-phone-flag-icon iti__flag" :class="'iti__' + (field.settings.countryDefaultValue ? field.settings.countryDefaultValue.toLowerCase() : 'auto')"></span>
+        <select class="fui-field-select fui-phone-flag-select"></select>
+    </div>
+
+    <input type="text" class="fui-field-input" :placeholder="field.settings.placeholder" :value="field.settings.defaultValue">
+    <span class="fui-field-icon">{{ field.getSvgIcon() | raw }}</span>
+</div>

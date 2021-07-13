@@ -1,0 +1,109 @@
+[
+    {
+        "title": "Get Started",
+        "collapsable": false,
+        "children": [
+            "get-started/installation-setup",
+            "get-started/requirements",
+            "get-started/configuration"
+        ]
+    },
+    {
+        "title": "Feature Tour",
+        "collapsable": false,
+        "children": [
+            "feature-tour/forms",
+            "feature-tour/multi-page",
+            "feature-tour/fields",
+            "feature-tour/conditions",
+            "feature-tour/synced-fields",
+            "feature-tour/existing-fields",
+            "feature-tour/submissions",
+            "feature-tour/email-notifications",
+            "feature-tour/sent-notifications",
+            "feature-tour/integrations",
+            "feature-tour/stencils",
+            "feature-tour/spam-protection",
+            "feature-tour/form-templates",
+            "feature-tour/email-templates",
+            "feature-tour/data-retention"
+        ]
+    },
+    {
+        "title": "Template Guides",
+        "collapsable": false,
+        "children": [
+            "template-guides/available-variables",
+            "template-guides/rendering-forms",
+            "template-guides/rendering-pages",
+            "template-guides/rendering-fields",
+            "template-guides/rendering-options",
+            "template-guides/custom-rendering",
+            "template-guides/form-templates",
+            "template-guides/email-templates",
+            "template-guides/cached-forms",
+            "template-guides/editing-submissions",
+            "template-guides/populating-forms",
+            "template-guides/selecting-forms",
+            "template-guides/relations",
+            "template-guides/google-tag-manager"
+        ]
+    },
+    {
+        "title": "Getting Elements",
+        "collapsable": false,
+        "children": [
+            "getting-elements/form-queries",
+            "getting-elements/submission-queries"
+        ]
+    },
+    {
+        "title": "Integrations",
+        "collapsable": false,
+        "children": [
+            "integrations/address-providers",
+            "integrations/captchas",
+            "integrations/elements",
+            "integrations/email-marketing",
+            "integrations/crm",
+            "integrations/webhooks",
+            "integrations/miscellaneous"
+        ]
+    },
+    {
+        "title": "Developers",
+        "collapsable": false,
+        "children": [
+            "developers/events",
+            "developers/hooks",
+            "developers/form",
+            "developers/page",
+            "developers/row",
+            "developers/field",
+            "developers/submission",
+            "developers/notification",
+            "developers/custom-field",
+            "developers/custom-integration",
+            "developers/front-end-css",
+            "developers/front-end-js",
+            "developers/javascript-api",
+            "developers/graphql",
+            "developers/console-commands"
+        ]
+    },
+    {
+        "title": "Guides",
+        "collapsable": false,
+        "children": [
+            "guides/migrating-from-freeform",
+            "guides/migrating-from-sprout-forms"
+        ]
+    },
+    {
+        "title": "Support",
+        "collapsable": false,
+        "children": [
+            "support/get-support"
+        ]
+    }
+]

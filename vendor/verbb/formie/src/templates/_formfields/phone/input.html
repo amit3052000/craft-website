@@ -1,0 +1,27 @@
+{% import '_includes/forms' as forms %}
+
+{% extends 'formie/_formfields/field' %}
+
+{% block field %}
+    {% namespace field.handle %}
+        {{ forms.text({
+            type: 'tel',
+            name: 'number',
+            required: field.required ? true : false,
+            value: value.number ?? '',
+        }) }}
+
+        {% if field.countryEnabled %}
+            {{ tag('input', {
+                type: 'hidden',
+                name: 'country',
+                value: value.country ?? '',
+                data: {
+                    country: '',
+                },
+            }) }}
+
+            {% do view.registerCssFile(view.getAssetManager().getPublishedUrl('@verbb/formie/web/assets/frontend/dist/css/fields/phone-country.css', true)) %}
+        {% endif %}
+    {% endnamespace %}
+{% endblock %}

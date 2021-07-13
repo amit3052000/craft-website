@@ -83,6 +83,15 @@ class InstalledVersions
       ),
       'reference' => '9bac5e971dd391e2802dca5400bbeacbaea9eb86',
     ),
+    'commerceguys/addressing' => 
+    array (
+      'pretty_version' => 'v1.2.1',
+      'version' => '1.2.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '311040bd78ea2ea82105dd1f17205c449ac8de47',
+    ),
     'composer/ca-bundle' => 
     array (
       'pretty_version' => '1.2.10',
@@ -207,6 +216,15 @@ class InstalledVersions
       ),
       'reference' => '77880488b9954b7884c25555c2a0ea9e7053f9d2',
     ),
+    'doctrine/collections' => 
+    array (
+      'pretty_version' => '1.6.7',
+      'version' => '1.6.7.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '55f8b799269a1a472457bd1a41b4f379d4cfba4a',
+    ),
     'doctrine/lexer' => 
     array (
       'pretty_version' => '1.2.1',
@@ -261,6 +279,33 @@ class InstalledVersions
       ),
       'reference' => '08e27c97e4c6ed02f37c5b2b20488046c8d90d75',
     ),
+    'fakerphp/faker' => 
+    array (
+      'pretty_version' => 'v1.15.0',
+      'version' => '1.15.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '89c6201c74db25fa759ff16e78a4d8f32547770e',
+    ),
+    'giggsey/libphonenumber-for-php' => 
+    array (
+      'pretty_version' => '8.12.27',
+      'version' => '8.12.27.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'f4d3aab2d2f7e0f82381303019be77fd22c49efe',
+    ),
+    'giggsey/locale' => 
+    array (
+      'pretty_version' => '1.9',
+      'version' => '1.9.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'b07f1eace8072ccc61445ad8fbd493ff9d783043',
+    ),
     'guzzlehttp/guzzle' => 
     array (
       'pretty_version' => '7.3.0',
@@ -269,6 +314,15 @@ class InstalledVersions
       array (
       ),
       'reference' => '7008573787b430c1c1f650e3722d9bba59967628',
+    ),
+    'guzzlehttp/oauth-subscriber' => 
+    array (
+      'pretty_version' => '0.4.0',
+      'version' => '0.4.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '47b4b9cd0b31a6733a3cc500d4285a8363502485',
     ),
     'guzzlehttp/promises' => 
     array (
@@ -287,6 +341,141 @@ class InstalledVersions
       array (
       ),
       'reference' => '1dc8d9cba3897165e16d12bb13d813afb1eb3fe7',
+    ),
+    'hoa/compiler' => 
+    array (
+      'pretty_version' => '3.17.08.08',
+      'version' => '3.17.08.08',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'aa09caf0bf28adae6654ca6ee415ee2f522672de',
+    ),
+    'hoa/consistency' => 
+    array (
+      'pretty_version' => '1.17.05.02',
+      'version' => '1.17.05.02',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'fd7d0adc82410507f332516faf655b6ed22e4c2f',
+    ),
+    'hoa/event' => 
+    array (
+      'pretty_version' => '1.17.01.13',
+      'version' => '1.17.01.13',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '6c0060dced212ffa3af0e34bb46624f990b29c54',
+    ),
+    'hoa/exception' => 
+    array (
+      'pretty_version' => '1.17.01.16',
+      'version' => '1.17.01.16',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '091727d46420a3d7468ef0595651488bfc3a458f',
+    ),
+    'hoa/file' => 
+    array (
+      'pretty_version' => '1.17.07.11',
+      'version' => '1.17.07.11',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '35cb979b779bc54918d2f9a4e02ed6c7a1fa67ca',
+    ),
+    'hoa/iterator' => 
+    array (
+      'pretty_version' => '2.17.01.10',
+      'version' => '2.17.01.10',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'd1120ba09cb4ccd049c86d10058ab94af245f0cc',
+    ),
+    'hoa/math' => 
+    array (
+      'pretty_version' => '1.17.05.16',
+      'version' => '1.17.05.16',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '7150785d30f5d565704912116a462e9f5bc83a0c',
+    ),
+    'hoa/protocol' => 
+    array (
+      'pretty_version' => '1.17.01.14',
+      'version' => '1.17.01.14',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '5c2cf972151c45f373230da170ea015deecf19e2',
+    ),
+    'hoa/regex' => 
+    array (
+      'pretty_version' => '1.17.01.13',
+      'version' => '1.17.01.13',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '7e263a61b6fb45c1d03d8e5ef77668518abd5bec',
+    ),
+    'hoa/ruler' => 
+    array (
+      'pretty_version' => '2.17.05.16',
+      'version' => '2.17.05.16',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '696835daf8336dfd490f032da7af444050e52dfc',
+    ),
+    'hoa/stream' => 
+    array (
+      'pretty_version' => '1.17.02.21',
+      'version' => '1.17.02.21',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '3293cfffca2de10525df51436adf88a559151d82',
+    ),
+    'hoa/ustring' => 
+    array (
+      'pretty_version' => '4.17.01.16',
+      'version' => '4.17.01.16',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'e6326e2739178799b1fe3fdd92029f9517fa17a0',
+    ),
+    'hoa/visitor' => 
+    array (
+      'pretty_version' => '2.17.01.16',
+      'version' => '2.17.01.16',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'c18fe1cbac98ae449e0d56e87469103ba08f224a',
+    ),
+    'hoa/zformat' => 
+    array (
+      'pretty_version' => '1.17.01.10',
+      'version' => '1.17.01.10',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '522c381a2a075d4b9dbb42eb4592dd09520e4ac2',
+    ),
+    'html2text/html2text' => 
+    array (
+      'pretty_version' => '4.3.1',
+      'version' => '4.3.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '61ad68e934066a6f8df29a3d23a6460536d0855c',
     ),
     'justinrainbow/json-schema' => 
     array (
@@ -342,6 +531,15 @@ class InstalledVersions
       ),
       'reference' => 'f3ad69181b8afed2c9edf7be5a2918144ff4ea32',
     ),
+    'league/html-to-markdown' => 
+    array (
+      'pretty_version' => '4.10.0',
+      'version' => '4.10.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '0868ae7a552e809e5cd8f93ba022071640408e88',
+    ),
     'league/mime-type-detection' => 
     array (
       'pretty_version' => '1.7.0',
@@ -351,6 +549,15 @@ class InstalledVersions
       ),
       'reference' => '3b9dff8aaf7323590c1d2e443db701eb1f9aa0d3',
     ),
+    'league/oauth1-client' => 
+    array (
+      'pretty_version' => 'v1.9.1',
+      'version' => '1.9.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '19a3ce488bb1547c906209e8293199ec34eaa5b1',
+    ),
     'league/oauth2-client' => 
     array (
       'pretty_version' => '2.6.0',
@@ -359,6 +566,15 @@ class InstalledVersions
       array (
       ),
       'reference' => 'badb01e62383430706433191b82506b6df24ad98',
+    ),
+    'league/oauth2-google' => 
+    array (
+      'pretty_version' => '3.0.4',
+      'version' => '3.0.4.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '6b79441f244040760bed5fdcd092a2bda7cf34c6',
     ),
     'mikehaertl/php-shellcommand' => 
     array (
@@ -729,6 +945,24 @@ class InstalledVersions
       array (
       ),
       'reference' => '27e5cf2b05e3744accf39d4c68a3235d9966d260',
+    ),
+    'verbb/base' => 
+    array (
+      'pretty_version' => '1.0.3',
+      'version' => '1.0.3.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '006cc4979e2b7669234a90bb7347129fe0185eb8',
+    ),
+    'verbb/formie' => 
+    array (
+      'pretty_version' => '1.4.9',
+      'version' => '1.4.9.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '345f239f61d9853ef83e400ed48b5fa3aadf7c4b',
     ),
     'vlucas/phpdotenv' => 
     array (

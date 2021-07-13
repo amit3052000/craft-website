@@ -1,9 +1,14 @@
-dateModified: 1625823073
+dateModified: 1626082768
 email:
   fromEmail: amitkum3052000@gmail.com
   fromName: 'new craft'
   transportType: craft\mail\transportadapters\Sendmail
 plugins:
+  formie:
+    edition: standard
+    enabled: true
+    licenseKey: BVSOY38F78IIF4C6NUR1E6JM
+    schemaVersion: 1.1.11
   redactor:
     edition: standard
     enabled: true

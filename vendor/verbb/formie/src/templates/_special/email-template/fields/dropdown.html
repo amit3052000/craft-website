@@ -1,0 +1,19 @@
+<p>
+    {% if not (options.hideName ?? false) %}
+        <strong>{{ field.name | t }}</strong><br>
+    {% endif %}
+
+    {% if field.multi %}
+        {% if value | length %}
+            <ul>
+                {% for item in value %}
+                    <li>{{ item }}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            {{ 'No response.' | t('formie') }}
+        {% endif %}
+    {% else %}
+        {{ value ? value : ('No response.' | t('formie')) }}
+    {% endif %}
+</p>

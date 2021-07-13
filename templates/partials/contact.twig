@@ -13,7 +13,7 @@
 
   <div class="w-lg-80 mx-auto">
     <!-- Contacts Form -->
-    <form class="js-validate">
+    {# <form class="js-validate">
       <div class="row">
         <!-- Input -->
         <div class="col-sm-6 mb-4">
@@ -72,7 +72,9 @@
         <button type="submit" class="btn btn-primary btn-wide transition-3d-hover mb-4">Submit</button>
         <p class="small">We'll get back to you in 1-2 business days.</p>
       </div>
-    </form>
+    </form> #}
+    {{ craft.formie.renderForm('contactUs') }}
+
     <!-- End Contacts Form -->
   </div>
 </div>

@@ -1,0 +1,14 @@
+contentColumnType: string
+fieldGroup: bd18aa1f-a7a3-4f6a-badc-d60a2f389e77 # about
+handle: sideBar
+instructions: ''
+name: 'side bar'
+searchable: true
+settings:
+  contentTable: '{{%matrixcontent_sidebar}}'
+  maxBlocks: ''
+  minBlocks: ''
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

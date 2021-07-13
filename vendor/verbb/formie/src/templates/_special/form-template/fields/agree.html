@@ -1,0 +1,27 @@
+{% set attributes = {
+    type: 'checkbox',
+    id: options.id,
+    class: [
+        'fui-input',
+        'fui-checkbox-input',
+    ],
+    name: field.handle,
+    placeholder: field.placeholder | t,
+    required: field.required ? true : false,
+    value: '1',
+    checked: value ? true : false,
+    data: {
+        'fui-message': field.settings.errorMessage | t,
+    },
+    aria: {
+        required: field.required ? 'true' : 'false',
+        checked: value ? 'true' : 'false',
+    },
+} | merge(field.getInputAttributes()) %}
+
+<input type="hidden" aria-checked="false" aria-hidden="true" name="{{ field.handle }}" value="">
+
+<div class="fui-checkbox">
+    <input {{ attr(attributes) }} />
+    <label for="{{ options.id }}" class="fui-checkbox-label">{{ field.getDescriptionHtml() }}</label>
+</div>

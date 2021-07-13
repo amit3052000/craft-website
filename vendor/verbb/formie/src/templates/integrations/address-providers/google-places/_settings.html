@@ -1,0 +1,47 @@
+{% import '_includes/forms' as forms %}
+{% import 'verbb-base/_macros' as macros %}
+
+{% set instructions %}
+### Connect to the {name} API
+1. Go to the <a href="https://console.cloud.google.com/project/_/apiui/apis/enabled" target="_blank">Google Cloud Platform Console</a>.
+1. Click the **Select a project** button. Either create a new project, or select an existing one.
+1. Select **Credentials** from the left side menu, and click **+ Create Credentials**, selecting **API Key**.
+1. From the left side menu, select **Library**.
+1. From the list of APIs enable both **Places API** and **Maps JavaScript API**.
+{% endset %}
+
+<div class="fui-settings-block">
+    {{ instructions | t('formie', { name: integration.displayName() }) | md }}
+</div>
+
+{{ forms.autosuggestField({
+    label: 'API Key' | t('formie'),
+    name: 'apiKey',
+    required: true,
+    suggestEnvVars: true,
+    value: integration.settings.apiKey ?? '',
+    warning: macros.configWarning('apiKey', 'formie'),
+    errors: integration.getErrors('apiKey'),
+}) }}
+
+{{ forms.editableTableField({
+    label: 'Options' | t('formie'),
+    instructions: 'Provide any additional options, as per the [Google Places docs](https://developers.google.com/maps/documentation/javascript/places-autocomplete#add-autocomplete).' | t('formie'),
+    id: 'options',
+    name: 'options',
+    cols: [
+        {
+            type: 'singleline',
+            heading: 'Option' | t('formie'),
+            width: '25%',
+        },
+        {
+            type: 'singleline',
+            heading: 'Value' | t('formie'),
+        },
+    ],
+    rows: integration.settings.options ?? [],
+    addRowLabel: 'Add an option' | t('formie'),
+    warning: macros.configWarning('options', 'formie'),
+    errors: integration.getErrors('options'),
+}) }}

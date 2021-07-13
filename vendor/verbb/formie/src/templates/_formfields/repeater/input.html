@@ -1,0 +1,33 @@
+{% extends 'formie/_formfields/field' %}
+
+{% block field %}
+
+{% namespace field.handle %}
+    <div class="fui-repeater-rows">
+        {% for row in value.all() %}
+            {% include 'formie/_formfields/repeater/fields' with {
+                element: row,
+            } %}
+        {% endfor %}
+    </div>
+
+    {% set buttonAttributes = {
+        class: 'btn add icon',
+        type: 'button',
+        data: {
+            'min-rows': field.minRows,
+            'max-rows': field.maxRows,
+            'add-repeater-row': field.handle,
+        }
+    } %}
+
+    <button {{ attr(buttonAttributes) }}>
+        {{ field.addLabel }}
+    </button>
+
+    <script type="text/template" data-repeater-template="{{ field.handle }}">
+        {% include 'formie/_formfields/repeater/fields' %}
+    </script>
+{% endnamespace %}
+
+{% endblock %}

@@ -1,0 +1,176 @@
+{% extends 'formie/_layouts' %}
+
+{% set crumbs = [
+    { label: craft.formie.getPluginName() | t('formie'), url: url('formie') },
+    { label: 'Settings' | t('app'), url: url('formie/settings') },
+    { label: 'Form Templates' | t('formie'), url: url('formie/settings/form-templates') },
+] %}
+
+{% set tabs = {
+    0: { label: 'Settings' | t('app'), url: '#settings' },
+    1: { label: 'Form Fields' | t('formie'), url: '#form-fields' },
+} %}
+
+{% set selectedSubnavItem = 'settings' %}
+
+{% set fullPageForm = true %}
+
+{% set selectedTab = 'settings' %}
+{% import '_includes/forms' as forms %}
+
+{% block content %}
+
+<input type="hidden" name="action" value="formie/form-templates/save">
+{{ redirectInput('formie/settings/form-templates') }}
+
+{% if template.id %}
+    <input type="hidden" name="sortOrder" value="{{ template.sortOrder }}">
+    <input type="hidden" name="id" value="{{ template.id }}">
+{% endif %}
+
+<div id="settings">
+    {{ forms.textField({
+        label: 'Name' | t('formie'),
+        first: true,
+        instructions: 'What this template will be called in the control panel.' | t('formie'),
+        id: 'name',
+        name: 'name',
+        value: template.name,
+        errors: template.getErrors('name'),
+        required: true
+    }) }}
+
+    {{ forms.textField({
+        label: 'Handle' | t('formie'),
+        instructions: 'How you’ll refer to this template in the templates.' | t('formie'),
+        id: 'handle',
+        class: 'code',
+        name: 'handle',
+        value: template.handle,
+        errors: template.getErrors('handle'),
+        required: true
+    }) }}
+
+    {% set templateTip -%}
+        <a href="https://github.com/verbb/formie/tree/craft-3/src/templates/_special/form-template">{{ 'Directory structure example.' | t('formie') }}</a>
+    {%- endset %}
+
+    {{ forms.lightswitchField({
+        label: 'Use Custom Template' | t('formie'),
+        instructions: 'Enable this option to use your own template files to render the form.' | t('formie'),
+        name: 'useCustomTemplates',
+        on: template.useCustomTemplates,
+        errors: template.getErrors('useCustomTemplates'),
+        toggle: 'custom-templates',
+    }) }}
+
+    <div id="custom-templates" class="{{ not template.useCustomTemplates ? 'hidden' }}">
+        {{ forms.autosuggestField({
+            label: 'HTML Template' | t('formie'),
+            instructions: 'The template directory that will be used to render the form.' | t('formie'),
+            tip: templateTip,
+            id: 'template',
+            name: 'template',
+            suggestions: craft.cp.getTemplateSuggestions(),
+            suggestEnvVars: false,
+            value: template.template,
+            errors: template.getErrors('template'),
+            warning: 'If you use custom templates, you will not receive template improvements and bug fixes. If possible, it is suggested to use the default template and create your own style.' | t('formie'),
+        }) }}
+
+        {% if not template.id %}
+            {{ forms.lightswitchField({
+                label: 'Copy Templates' | t('formie'),
+                instructions: 'Enable this option to automatically copy template files into the template directory.' | t('formie'),
+                tip: 'The directory must be empty for files to be copied.' | t('formie'),
+                name: 'copyTemplates',
+                on: template.copyTemplates,
+            }) }}
+        {% endif %}
+    </div>
+
+    <hr>
+
+    <h2>{{ 'CSS Options' | t('formie') }}</h2>
+
+    {{ forms.lightswitchField({
+        label: 'Output CSS' | t('formie'),
+        instructions: 'Enable this option to output basic layout CSS for row and column support when rendering forms using this template.' | t('formie'),
+        name: 'outputCssLayout',
+        on: template.outputCssLayout,
+        errors: template.getErrors('outputCssLayout'),
+        toggle: 'output-css-theme',
+    }) }}
+
+    <div id="output-css-theme" class="{{ not template.outputCssLayout ? 'hidden' }}">
+        {{ forms.lightswitchField({
+            label: 'Output Theme' | t('formie'),
+            instructions: 'Enable this option to output the default Formie CSS theme when rendering forms using this template.' | t('formie'),
+            name: 'outputCssTheme',
+            on: template.outputCssTheme,
+            errors: template.getErrors('outputCssTheme'),
+        }) }}
+
+        {{ forms.selectField({
+            label: 'CSS Render Location' | t('formie'),
+            instructions: 'Determine where to render the CSS output for the form.' | t('formie'),
+            name: 'outputCssLocation',
+            value: template.outputCssLocation,
+            errors: template.getErrors('outputCssLocation'),
+            options: [
+                { label: 'Page Header' | t('formie'), value: 'page-header' },
+                { label: 'Inside Form' | t('formie'), value: 'inside-form' },
+                { label: 'Manual' | t('formie'), value: 'manual' },
+            ],
+        }) }}
+    </div>
+
+    <hr>
+
+    <h2>{{ 'JavaScript Options' | t('formie') }}</h2>
+
+    {{ forms.lightswitchField({
+        label: 'Output Base JavaScript' | t('formie'),
+        instructions: 'Enable this option to output the base Formie JavaScript when rendering forms using this template. This provides event listeners for forms, ensuring captcha integrations work. Read the [docs](https://verbb.io/craft-plugins/formie/docs/developers/front-end-js) for more information.' | t('formie'),
+        name: 'outputJsBase',
+        on: template.outputJsBase,
+        errors: template.getErrors('outputJs'),
+        toggle: 'output-js-base',
+        warning: 'Ensure you understand the implications of disabling Formie‘s JavaScript. Read the [docs](https://verbb.io/craft-plugins/formie/docs/developers/front-end-js) for more information.' | t('formie'),
+    }) }}
+
+    <div id="output-js-base" class="{{ not template.outputJsBase ? 'hidden' }}">
+        {{ forms.lightswitchField({
+            label: 'Output Theme' | t('formie'),
+            instructions: 'Enable this option to output the themed JavaScript when rendering forms using this template. This provides client-side validation, multi-page support, and lots more. Read the [docs](https://verbb.io/craft-plugins/formie/docs/developers/front-end-js) for more information.' | t('formie'),
+            name: 'outputJsTheme',
+            on: template.outputJsTheme,
+            errors: template.getErrors('outputJsTheme'),
+        }) }}
+
+        {{ forms.selectField({
+            label: 'JavaScript Render Location' | t('formie'),
+            instructions: 'Determine where to render the JavaScript output for the form.' | t('formie'),
+            name: 'outputJsLocation',
+            value: template.outputJsLocation,
+            errors: template.getErrors('outputJsLocation'),
+            options: [
+                { label: 'Page Footer' | t('formie'), value: 'page-footer' },
+                { label: 'Inside Form' | t('formie'), value: 'inside-form' },
+                { label: 'Manual' | t('formie'), value: 'manual' },
+            ],
+        }) }}
+    </div>
+</div>
+
+<div id="form-fields" class="hidden">
+    {% include '_includes/fieldlayoutdesigner' with {
+        fieldLayout: template.getFieldLayout(),
+    } only %}
+</div>
+
+{% endblock %}
+
+{% js %}
+    {% if not template.handle %}new Craft.HandleGenerator('#name', '#handle');{% endif %}
+{% endjs %}
