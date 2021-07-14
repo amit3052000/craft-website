@@ -1,6 +1,6 @@
 {
   "require": {
-    "craftcms/cms": "^3.6.4",
+    "craftcms/cms": "3.7.0",
     "craftcms/redactor": "2.8.7",
     "ether/seo": "3.7.4",
     "verbb/formie": "1.4.9",

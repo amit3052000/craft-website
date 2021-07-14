@@ -1,7 +1,6 @@
 {% set footer_section = craft.entries().section('footer').one() %}
 
 
-
 <footer class="container space-2">
   <!-- Links -->
   <div class="row mb-11">
@@ -88,7 +87,7 @@
         {% for social_link in footer_section.socialLinks %}
           <li class="list-inline-item mb-2 mb-sm-0">
             <a class="btn btn-xs btn-icon btn-soft-indigo rounded-circle" href="{{  social_link.socialLink }}">
-              <i class="{{  social_link.iconclass }}"></i>
+              <i class="{{ social_link.iconclass }}"></i>
             </a>
           </li>
         {% endfor %}

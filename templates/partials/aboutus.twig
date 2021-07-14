@@ -19,9 +19,9 @@
                   <span class="d-block font-size-1">{{ block.bottom }}</span>
               {% endswitch %}
             {% endfor %}
+            
           </li>
           <li>
-
             <ul class="list-inline">
               {% for social_link in about.socialLinks %}
                 <li class="list-inline-item">
@@ -30,17 +30,6 @@
                   </a>
                 </li>
               {% endfor %}
-              <li class="list-inline-item">
-                <a class="icon icon-xs icon-soft-dark icon-circle" href="#" data-toggle="tooltip" data-placement="top" title="Capsule on Twitter">
-                  <i class="fab fa-twitter"></i>
-                </a>
-              </li>
-
-              <li class="list-inline-item">
-                <a class="icon icon-xs icon-soft-dark icon-circle" href="#" data-toggle="tooltip" data-placement="top" title="Capsule on Github">
-                  <i class="fab fa-github"></i>
-                </a>
-              </li>
             </ul>
           </li>
         </ul>
@@ -49,30 +38,31 @@
 
     <div class="col-md-9">
       <div class="mb-5">
-        <p>Capsule was launched in 2009 following the founders' frustration with existing CRM services that were either overly simplistic or far too complex for most businesses. We believe the value of a modern CRM lies in the ability to help businesses stay organized, know more about their customers, build strong relationships and to make the most of sales opportunities, all while minimizing user input. We built Capsule to deliver on these values and today Capsule is used by thousands of businesses of all sizes all over the world.</p>
         {{ about.aboutUsDiscription	 }}
-        <div class="collapse" id="collapseLinkDescription">
+        {# <div class="collapse" id="collapseLinkDescription">
           <p>We're based in Manchester, United Kingdom, a city with a creative heart that was founded on science and industry and the birthplace of the modern computer.</p>
-        </div>
-
-        <a class="link-collapse" data-toggle="collapse" href="#collapseLinkDescription" role="button" aria-expanded="false" aria-controls="collapseLinkDescription">
+        </div> #}
+        <a href="{{siteUrl}}about/about.twig">about us</a>
+        {# <a class="link-collapse" data-toggle="collapse" href="#collapseLinkDescription" role="button" aria-expanded="false" aria-controls="collapseLinkDescription">
           <span class="link-collapse-default">Read more <i class="fas fa-angle-down fa-sm ml-1"></i></span>
           <span class="link-collapse-active">Read less <i class="fas fa-angle-up fa-sm ml-1"></i></span>
-        </a>
+        </a> #}
       </div>
 
       <div id="fancyboxGallery">
         <div class="row mx-n2">
+          
+          {% for image in about.aboutUsImage %}
           <div class="col-4 col-sm px-2 mb-3 mb-sm-0">
             <a class="js-fancybox media-viewer" href="javascript:;"
                data-hs-fancybox-options='{
                  "selector": "#fancyboxGallery .js-fancybox",
                  "speed": 700
                }'
-               data-src="{{ siteUrl }}assests/img/900x900/img1.jpg"
+               data-src="{{ image.url }}"
                data-caption="Front in frames - image #01">
-              <img class="img-fluid rounded" src="{{ siteUrl }}assets/img/900x900/img1.jpg" alt="Image Description">
-
+              <img class="img-fluid rounded" src="{{ image.url }}" alt="Image Description">
+              
               <span class="media-viewer-container">
                 <span class="media-viewer-icon">
                   <i class="fas fa-plus media-viewer-icon-inner"></i>
@@ -80,79 +70,8 @@
               </span>
             </a>
           </div>
+          {% endfor %}
 
-          <div class="col-4 col-sm px-2 mb-3 mb-sm-0">
-            <a class="js-fancybox media-viewer" href="javascript:;"
-               data-hs-fancybox-options='{
-                 "selector": "#fancyboxGallery .js-fancybox",
-                 "speed": 700
-               }'
-               data-src="{{ siteUrl }}assests/img/900x900/img8.jpg"
-               data-caption="Front in frames - image #02">
-              <img class="img-fluid rounded" src="{{ siteUrl }}assests/img/900x900/img8.jpg" alt="Image Description">
-
-              <span class="media-viewer-container">
-                <span class="media-viewer-icon">
-                  <i class="fas fa-plus media-viewer-icon-inner"></i>
-                </span>
-              </span>
-            </a>
-          </div>
-
-          <div class="col-4 col-sm px-2 mb-3 mb-sm-0">
-            <a class="js-fancybox media-viewer" href="javascript:;"
-               data-hs-fancybox-options='{
-                 "selector": "#fancyboxGallery .js-fancybox",
-                 "speed": 700
-               }'
-               data-src="{{ siteUrl }}assests/img/900x900/img7.jpg"
-               data-caption="Front in frames - image #03">
-              <img class="img-fluid rounded" src="{{ siteUrl }}assests/img/900x900/img7.jpg" alt="Image Description">
-
-              <span class="media-viewer-container">
-                <span class="media-viewer-icon">
-                  <i class="fas fa-plus media-viewer-icon-inner"></i>
-                </span>
-              </span>
-            </a>
-          </div>
-
-          <div class="col-4 col-sm px-2 mb-3 mb-sm-0">
-            <a class="js-fancybox media-viewer" href="javascript:;"
-               data-hs-fancybox-options='{
-                 "selector": "#fancyboxGallery .js-fancybox",
-                 "speed": 700
-               }'
-               data-src="{{ siteUrl }}assests/img/900x900/img23.jpg"
-               data-caption="Front in frames - image #04">
-              <img class="img-fluid rounded" src="{{ siteUrl }}assests/img/900x900/img23.jpg" alt="Image Description">
-
-              <span class="media-viewer-container">
-                <span class="media-viewer-icon">
-                  <i class="fas fa-plus media-viewer-icon-inner"></i>
-                </span>
-              </span>
-            </a>
-          </div>
-
-          <div class="col-4 col-sm px-2 mb-3 mb-sm-0">
-            <a class="js-fancybox media-viewer" href="javascript:;"
-               data-hs-fancybox-options='{
-                 "selector": "#fancyboxGallery .js-fancybox",
-                 "speed": 700
-               }'
-               data-src="{{ siteUrl }}assests/img/900x900/img9.jpg"
-               data-caption="Front in frames - image #05">
-              <img class="img-fluid rounded" src="{{ siteUrl }}assests/img/900x900/img9.jpg" alt="Image Description">
-
-              <span class="media-viewer-container">
-                <span class="media-viewer-icon media-viewer-icon-active">
-                  <span class="media-viewer-icon-inner">+1</span>
-                </span>
-              </span>
-            </a>
-          </div>
-        </div>
 
         <img class="js-fancybox d-none" alt="Image Description"
              data-hs-fancybox-options='{

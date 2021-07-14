@@ -451,7 +451,7 @@ class AssetTransforms extends Component
         $transformsByFingerprint = [];
         $indexCondition = ['or'];
 
-        /* @var AssetTransform|null $refTransform */
+        /** @var AssetTransform|null $refTransform */
         $refTransform = null;
 
         foreach ($transforms as $transform) {
@@ -675,7 +675,7 @@ class AssetTransforms extends Component
                 sleep(1);
                 App::maxPowerCaptain();
 
-                /* @noinspection CallableParameterUseCaseInTypeContextInspection */
+                /** @noinspection CallableParameterUseCaseInTypeContextInspection */
                 $index = $this->getTransformIndexModelById($index->id);
 
                 // Is it being worked on right now?
@@ -801,7 +801,7 @@ class AssetTransforms extends Component
 
         // If we have a match, copy the file.
         if ($matchFound) {
-            /* @var array $matchFound */
+            /** @var array $matchFound */
             $from = $asset->folderPath . $this->getTransformSubpath($asset, new AssetTransformIndex($matchFound));
             $to = $asset->folderPath . $this->getTransformSubpath($asset, $index);
 
@@ -836,6 +836,11 @@ class AssetTransforms extends Component
         }
 
         if (is_array($transform)) {
+            if (array_key_exists('transform', $transform)) {
+                $baseTransform = $this->normalizeTransform(ArrayHelper::remove($transform, 'transform'));
+                return $this->extendTransform($baseTransform, $transform);
+            }
+
             return new AssetTransform($transform);
         }
 

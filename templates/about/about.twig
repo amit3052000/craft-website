@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    {% hook "seo" %}
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <title>Welcome to Craft CMS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="referrer" content="origin-when-cross-origin" />
+
+    {#
+        CSS here
+                  #}
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ siteUrl }}assets/css/theme.min.css">
+    <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.css">
+    <link rel="stylesheet" href="{{ siteUrl }}assets/vendor/hs-megamenu/src/hs.megamenu.css">
+    <link rel="stylesheet" href="./node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css">
+    <script src="{{ siteUrl }}assets/js/components/hs.header.js"></script>
+    
+    <script src="{{ siteUrl }}assets/vendor/hs-megamenu/src/hs.megamenu.js"></script>
+
+    <!-- JS Plugins Init. -->
+    <script>
+        $(document).on('ready', function () {
+        // INITIALIZATION OF HEADER
+        // =======================================================
+        var header = new HSHeader($('#header')).init();
+
+
+        // INITIALIZATION OF MEGA MENU
+        // =======================================================
+        var megaMenu = new HSMegaMenu($('.js-mega-menu')).init();
+      });
+    </script>
+
+    <script src="./node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js"></script>
+
+    <!-- JS Front -->
+    <script src="{{ siteUrl }}assests/js/hs.fancybox.js"></script>
+
+    <!-- JS Plugins Init. -->
+    <script>
+      $(document).on('ready', function () {
+      // INITIALIZATION OF FANCYBOX
+      // =======================================================
+        $('.js-fancybox').each(function () {
+          var fancybox = $.HSCore.components.HSFancyBox.init($(this));
+        });
+      });
+    </script>
+
+    <!-- JS Implementing Plugins -->
+    <script src="./node_modules/jquery-validation/dist/jquery.validate.min.js"></script>
+
+    <!-- JS Front -->
+    <script src="./assets/js/hs.validation.js"></script>
+
+    <!-- JS Plugins Init. -->
+    <script>
+      $(document).on('ready', function () {
+      // INITIALIZATION OF FORM VALIDATION
+      // =======================================================
+        $('.js-validate').each(function () {
+          var validation = $.HSCore.components.HSValidation.init($(this));
+        });
+      });
+    </script>
+
+
+
+</head>
+<body class="ltr">
+
+    {% include "/layouts/header" %}
+
+    {% include "/partials/aboutus" %}
+
+    {% include "/partials/nav/footer" %}
+
+
+
+
+
+
+
+
+
+</body>
+</html>

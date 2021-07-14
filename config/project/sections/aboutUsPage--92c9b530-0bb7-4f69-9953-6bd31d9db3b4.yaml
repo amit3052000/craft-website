@@ -1,0 +1,12 @@
+defaultPlacement: end
+enableVersioning: true
+handle: aboutUsPage
+name: 'About us Page'
+propagationMethod: all
+siteSettings:
+  d5f1d19a-569c-4bd6-9599-42df2dce89f8: # new craft
+    enabledByDefault: true
+    hasUrls: true
+    template: about\about
+    uriFormat: about-us-page
+type: single

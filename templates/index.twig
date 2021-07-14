@@ -11,16 +11,67 @@
     {#
         CSS here
                   #}
+    
+    
 
-
-
+    <link rel="stylesheet" href="{{ siteUrl }}assets/vendor/fancybox/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="{{ siteUrl }}assets/vendor/hs-megamenu/src/hs.megamenu.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ siteUrl }}assets/css/theme.min.css">
-    <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.css">
-    <link rel="stylesheet" href="{{ siteUrl }}assets/vendor/hs-megamenu/src/hs.megamenu.css">
-    <link rel="stylesheet" href="./node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="{{ siteUrl }}assets/css/all.css">
+    
 
+    <script src="{{ siteUrl }}assets/js/components/hs.header.js"></script>
+    <script src="{{ siteUrl }}assets/vendor/hs-megamenu/src/hs.megamenu.js"></script>
+
+    <!-- JS Plugins Init. -->
+    <script>
+        $(document).on('ready', function () {
+        // INITIALIZATION OF HEADER
+        // =======================================================
+        var header = new HSHeader($('#header')).init();
+
+
+        // INITIALIZATION OF MEGA MENU
+        // =======================================================
+        var megaMenu = new HSMegaMenu($('.js-mega-menu')).init();
+        alert("working");
+      });
+    </script>
+
+    <script src="{{ siteUrl }}assets/vendor/fancybox/jquery.fancybox.min.js"></script>
+
+    <!-- JS Front -->
+    <script src="{{ siteUrl }}assests/js/hs.fancybox.js"></script>
+
+    <!-- JS Plugins Init. -->
+    <script>
+      $(document).on('ready', function () {
+      // INITIALIZATION OF FANCYBOX
+      // =======================================================
+        $('.js-fancybox').each(function () {
+          var fancybox = $.HSCore.components.HSFancyBox.init($(this));
+        });
+      });
+    </script>
+
+    <!-- JS Implementing Plugins -->
+    <script src="{{ siteUrl }}assets/vendor/jquery-validation/dist/jquery.validate.min.js"></script>
+
+    <!-- JS Front -->
+    <script src="{{ siteUrl }}assets/js/components/hs.validation.js"></script>
+
+    <!-- JS Plugins Init. -->
+    <script>
+      $(document).on('ready', function () {
+      // INITIALIZATION OF FORM VALIDATION
+      // =======================================================
+        $('.js-validate').each(function () {
+          var validation = $.HSCore.components.HSValidation.init($(this));
+        });
+      });
+    </script>
 
 
 </head>
@@ -47,63 +98,10 @@
 
 
 
-
-    {#
-        Scripts are here
-                          #}
+  
 
 
-
-    <script src="{{ siteUrl }}assets/js/components/hs.header.js"></script>
     
-    <script src="{{ siteUrl }}assets/vendor/hs-megamenu/src/hs.megamenu.js"></script>
-
-    <!-- JS Plugins Init. -->
-    <script>
-        $(document).on('ready', function () {
-        // INITIALIZATION OF HEADER
-        // =======================================================
-        var header = new HSHeader($('#header')).init();
-
-
-        // INITIALIZATION OF MEGA MENU
-        // =======================================================
-        var megaMenu = new HSMegaMenu($('.js-mega-menu')).init();
-      });
-    </script>
-
-    <script src="./node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js"></script>
-
-    <!-- JS Front -->
-    <script src="{{ siteUrl }}assests/js/hs.fancybox.js"></script>
-
-    <!-- JS Plugins Init. -->
-    <script>
-      $(document).on('ready', function () {
-      // INITIALIZATION OF FANCYBOX
-      // =======================================================
-        $('.js-fancybox').each(function () {
-          var fancybox = $.HSCore.components.HSFancyBox.init($(this));
-        });
-      });
-    </script>
-
-    <!-- JS Implementing Plugins -->
-    <script src="./node_modules/jquery-validation/dist/jquery.validate.min.js"></script>
-
-    <!-- JS Front -->
-    <script src="./assets/js/hs.validation.js"></script>
-
-    <!-- JS Plugins Init. -->
-    <script>
-      $(document).on('ready', function () {
-      // INITIALIZATION OF FORM VALIDATION
-      // =======================================================
-        $('.js-validate').each(function () {
-          var validation = $.HSCore.components.HSValidation.init($(this));
-        });
-      });
-    </script>
 
 
 

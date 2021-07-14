@@ -122,12 +122,12 @@
     ),
     'craftcms/cms' => 
     array (
-      'pretty_version' => '3.6.17',
-      'version' => '3.6.17.0',
+      'pretty_version' => '3.7.0',
+      'version' => '3.7.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '4497db8b89474a68fc43ee1d7f8b78beff9dc6f2',
+      'reference' => '6948a8ab4b64a0224ba69cccb5c5a4deea196b19',
     ),
     'craftcms/oauth2-craftid' => 
     array (

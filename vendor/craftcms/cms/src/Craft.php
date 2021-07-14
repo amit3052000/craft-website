@@ -203,7 +203,7 @@ class Craft extends Yii
         // Now generate it again, this time with the correct field value types
         $fieldHandles = [];
         foreach ($fields as $field) {
-            /* @var FieldInterface|string $fieldClass */
+            /** @var FieldInterface|string $fieldClass */
             $fieldClass = $field['type'];
             if (Component::validateComponentClass($fieldClass, FieldInterface::class)) {
                 $types = explode('|', $fieldClass::valueType());
@@ -343,10 +343,16 @@ EOD;
         ];
 
         // Grab the config from config/guzzle.php that is used on every Guzzle request.
-        $guzzleConfig = static::$app->getConfig()->getConfigFromFile('guzzle');
+        $configService = static::$app->getConfig();
+        $guzzleConfig = $configService->getConfigFromFile('guzzle');
+        $generalConfig = $configService->getGeneral();
 
         // Merge everything together
         $guzzleConfig = ArrayHelper::merge($defaultConfig, $guzzleConfig, $config);
+
+        if ($generalConfig->httpProxy) {
+            $guzzleConfig['proxy'] = $generalConfig->httpProxy;
+        }
 
         return new Client($guzzleConfig);
     }

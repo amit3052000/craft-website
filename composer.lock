@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4c8d79aa4cd2778ec426a452b2512522",
+    "content-hash": "6a1f18b191cea67b4716f15e560787b5",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -396,11 +396,11 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "3.6.17",
+            "version": "3.7.0",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/4497db8b89474a68fc43ee1d7f8b78beff9dc6f2",
-                "reference": "4497db8b89474a68fc43ee1d7f8b78beff9dc6f2",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/6948a8ab4b64a0224ba69cccb5c5a4deea196b19",
+                "reference": "6948a8ab4b64a0224ba69cccb5c5a4deea196b19",
                 "shasum": ""
             },
             "require": {
@@ -421,7 +421,7 @@
                 "ext-zip": "*",
                 "guzzlehttp/guzzle": "^6.5.5|^7.2.0",
                 "laminas/laminas-feed": "~2.12.3|^2.13.1",
-                "league/flysystem": "^1.1.3",
+                "league/flysystem": "^1.1.4",
                 "league/oauth2-client": "^2.6.0",
                 "mikehaertl/php-shellcommand": "^1.6.3",
                 "php": ">=7.2.5",
@@ -484,7 +484,7 @@
                 "docs": "https://craftcms.com/docs/3.x/",
                 "rss": "https://github.com/craftcms/cms/releases.atom"
             },
-            "time": "2021-06-15T15:59:20+00:00"
+            "time": "2021-07-13T14:30:54+00:00"
         },
         {
             "name": "craftcms/oauth2-craftid",
