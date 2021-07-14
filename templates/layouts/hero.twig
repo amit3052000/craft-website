@@ -1,5 +1,3 @@
-{% set hero_section=craft.entries().section('hero').one() %}
-{# {% set hero_section = entry.hero.one() %} #}
 
 
 <!-- Hero Section -->
@@ -8,39 +6,41 @@
     <div class="col-md-6 col-lg-5">
       <!-- Info -->
       <div class="mb-5">
-        <h1>{{ hero_section.richText }}</h1>
-        {# <p>{{ hero_section.heroDiscription }}</p> #}
-        {% for block in hero_section.heroContents %}
+        {% for block in entry.heroContents %}
           {% switch block.type %}
             {% case 'heroHeading' %}
-              {{ block.heading }}
+              <h1>{{ block.heading }}</h1>
+            
             {% case 'heroDiscription' %}
-              {{ block.discription }}
-            {# {% case 'heroIcons' %}
-              <img src="{{ block.icons.url }}"> #}
+              <p>{{ block.discription }}</p>
           {% endswitch %}
-          {# {% if block.type=="heroHeading" %}
-            {{ block.heading }}
-          {% elseif block.type=="heroDiscription" %}
-            {{ block.discription }}
-          {% endif %} #}
         {% endfor %}
         
       </div>
-
-      {# <div class="mb-3">
-        <a class="btn btn-primary btn-wide transition-3d-hover mb-2 mb-sm-0 mr-3" href="#">Get Started</a>
-        <a class="btn btn-link mb-2 mb-sm-0" href="#">Let's Talk <i class="fas fa-angle-right fa-sm ml-1"></i></a>
-      </div> #}
+      
+      <div class="mb-3">
+        {% for block in entry.heroContents %}
+          {% if block.type == "heroLinks" %}
+            <a class="{{ block.buttonClass }}" href="{{ block.linkUrl }}">{{ block.linkName }}</a>
+          {% endif %}
+        {% endfor %}
+      </div>
 
       <p class="small">Start free trial. * No credit card required.</p>
       <!-- End Info -->
     </div>
 
+
     <div class="col-md-6 d-none d-md-inline-block">
       <!-- SVG Illustration -->
       <figure class="w-100">
-        <img class="img-fluid" src="{{ siteUrl }}assets/svg/illustrations/hiker-man.svg" alt="Image Description">
+        {% for block in entry.heroContents %}
+          {% if block.type == 'heroImage' %}
+            {% for pic in block.image %}
+            <img class="img-fluid" src="{{ pic.url }}" alt="{{ block.imageCaption }}">
+            {% endfor %}
+          {% endif %}
+        {% endfor %}
       </figure>
       <!-- End SVG Illustration -->
     </div>
@@ -49,37 +49,18 @@
   <!-- Clients -->
   
   <div class="row justify-content-between text-center">
+    {% for image in entry.heroContents %}
+    {% if image.type=="heroIcons" %}
+    {% set pro = image.icons %}
+      {% for im in pro %}
     <div class="col-4 col-lg-2 mb-5 mb-lg-0">
       <div class="mx-3">
-        <img class="max-w-11rem max-w-md-13rem mx-auto" src="{{ siteUrl }}assets/svg/clients-logo/netflix.svg" alt="Image Description">
+        <img class="max-w-11rem max-w-md-13rem mx-auto" src="{{ im.url }}" alt="Image Description">
       </div>
     </div>
-    
-    {# <div class="col-4 col-lg-2 mb-5 mb-lg-0">
-      <div class="mx-3">
-        <img class="max-w-11rem max-w-md-13rem mx-auto" src="{{ siteUrl }}assets/svg/clients-logo/netflix.svg" alt="Image Description" >
-      </div>
-    </div>
-    <div class="col-4 col-lg-2 mb-5 mb-lg-0">
-      <div class="mx-3">
-        <img class="max-w-11rem max-w-md-13rem mx-auto" src="{{ siteUrl }}assets/svg/clients-logo/fitbit.svg" alt="Image Description">
-      </div>
-    </div>
-    <div class="col-4 col-lg-2">
-      <div class="mx-3">
-        <img class="max-w-11rem max-w-md-13rem mx-auto" src="{{ siteUrl }}assets/svg/clients-logo/google.svg" alt="Image Description">
-      </div>
-    </div>
-    <div class="col-4 col-lg-2">
-      <div class="mx-3">
-        <img class="max-w-11rem max-w-md-13rem mx-auto" src="{{ siteUrl }}assets/svg/clients-logo/airbnb.svg" alt="Image Description">
-      </div>
-    </div>
-    <div class="col-4 col-lg-2">
-      <div class="mx-3">
-        <img class="max-w-11rem max-w-md-13rem mx-auto" src="{{ siteUrl }}assets/svg/clients-logo/uber.svg" alt="Image Description">
-      </div>
-    </div> #}
+      {% endfor %}
+    {% endif %}
+    {% endfor %}
   </div>
   <!-- End Clients -->
 </div>

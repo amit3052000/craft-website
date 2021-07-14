@@ -26,6 +26,7 @@ fieldLayouts:
         sortOrder: 1
 fields:
   3e5c4262-8925-4e2d-a91a-9b658da80129: # image caption
+    columnSuffix: null
     contentColumnType: text
     fieldGroup: null
     handle: imageCaption
@@ -45,6 +46,7 @@ fields:
     translationMethod: none
     type: craft\fields\PlainText
   fd557920-a0c0-4cbc-a722-83e1320c4934: # image
+    columnSuffix: null
     contentColumnType: string
     fieldGroup: null
     handle: image

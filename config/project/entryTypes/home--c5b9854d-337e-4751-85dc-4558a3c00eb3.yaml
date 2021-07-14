@@ -26,8 +26,97 @@ fieldLayouts:
             type: craft\fieldlayoutelements\EntryTitleField
             warning: null
             width: 100
-        name: Content
+          -
+            fieldUid: d86dc7e7-50cc-4cdc-a891-2ad132855b61 # hero title
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 350c29f3-6541-46c0-9209-dae7e78f1029 # hero contents
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: 'hero content'
         sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: 5338aab9-315f-43b2-8d8c-1eb2e1544020 # About Us Heading
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 9a8a1e1c-ac90-4221-a60c-959864075fc2 # About Us Discription
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: e47f99bc-6336-43d8-a073-c32b868b95e6 # side bar
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 74be6f86-1921-4138-9371-ceffda33858b # about us Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: fa989d5a-8e1d-4698-8ba4-8038eeae3311 # Social Links
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: 'about content'
+        sortOrder: 2
+      -
+        elements:
+          -
+            fieldUid: c1d76441-2571-4c32-9505-d3d22b0e5c72 # contact heading
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 7ef064a6-d796-4df8-97b8-2d3cf456824d # contact discription
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: 'contact content'
+        sortOrder: 3
 handle: home
 hasTitleField: true
 name: Home

@@ -1,17 +1,13 @@
-{% set about = craft.entries().section('aboutUs').one() %}
-
-
-
 <!-- About Section -->
 <div class="container">
-  <h3>{{ about.aboutUsHeading }}</h3>
+  <h3>{{ entry.aboutUsHeading }}</h3>
 
   <div class="row mb-5">
     <div class="col-md-3 order-md-2 mb-3 mb-md-0">
       <div class="pl-md-4">
         <ul class="list-unstyled list-article">
           <li>
-            {% for block in about.sideBar %}
+            {% for block in entry.sideBar %}
               {% switch block.type %}
                 {% case 'sideHead' %}
                   <span class="h5 d-block">{{ block.heading }}</span>
@@ -23,7 +19,7 @@
           </li>
           <li>
             <ul class="list-inline">
-              {% for social_link in about.socialLinks %}
+              {% for social_link in entry.socialLinks %}
                 <li class="list-inline-item">
                   <a class="icon icon-xs icon-soft-dark icon-circle" href="{{  social_link.socialLink }}" data-toggle="tooltip" data-placement="top" title="Capsule on Facebook">
                     <i class="{{  social_link.iconclass }}"></i>
@@ -38,7 +34,7 @@
 
     <div class="col-md-9">
       <div class="mb-5">
-        {{ about.aboutUsDiscription	 }}
+        {{ entry.aboutUsDiscription	 }}
         {# <div class="collapse" id="collapseLinkDescription">
           <p>We're based in Manchester, United Kingdom, a city with a creative heart that was founded on science and industry and the birthplace of the modern computer.</p>
         </div> #}
@@ -52,7 +48,7 @@
       <div id="fancyboxGallery">
         <div class="row mx-n2">
           
-          {% for image in about.aboutUsImage %}
+          {% for image in entry.aboutUsImage %}
           <div class="col-4 col-sm px-2 mb-3 mb-sm-0">
             <a class="js-fancybox media-viewer" href="javascript:;"
                data-hs-fancybox-options='{

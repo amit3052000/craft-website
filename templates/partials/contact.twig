@@ -6,73 +6,13 @@
 <div class="container space-2">
   <!-- Title -->
   <div class="w-md-80 w-lg-50 text-center mx-md-auto mb-5 mb-md-9">
-    <h2>Tell us about yourself</h2>
-    <p>Whether you have questions or you would just like to say hello, contact us.</p>
+    <h2>{{ entry.contactHeading }}</h2>
+    <p>{{ entry.contactDiscription }}</p>
   </div>
   <!-- End Title -->
 
   <div class="w-lg-80 mx-auto">
-    <!-- Contacts Form -->
-    {# <form class="js-validate">
-      <div class="row">
-        <!-- Input -->
-        <div class="col-sm-6 mb-4">
-          <div class="js-form-message">
-            <label class="input-label">Your name</label>
-            <input type="text" class="form-control" name="name" placeholder="Jeff Fisher" aria-label="Jeff Fisher" required
-                   data-msg="Please enter your name.">
-          </div>
-        </div>
-        <!-- End Input -->
-
-        <!-- Input -->
-        <div class="col-sm-6 mb-4">
-          <div class="js-form-message">
-            <label class="input-label">Your email address</label>
-            <input type="email" class="form-control" name="email" placeholder="jackwayley@gmail.com" aria-label="jackwayley@gmail.com" required
-                   data-msg="Please enter a valid email address.">
-          </div>
-        </div>
-        <!-- End Input -->
-
-        <div class="w-100"></div>
-
-        <!-- Input -->
-        <div class="col-sm-6 mb-4">
-          <div class="js-form-message">
-            <label class="input-label">Subject</label>
-            <input type="text" class="form-control" name="subject" placeholder="Web design" aria-label="Web design" required
-                   data-msg="Please enter a subject.">
-          </div>
-        </div>
-        <!-- End Input -->
-
-        <!-- Input -->
-        <div class="col-sm-6 mb-4">
-          <div class="js-form-message">
-            <label class="input-label">Your phone number</label>
-            <input type="number" class="form-control" name="phone" placeholder="1-800-643-4500" aria-label="1-800-643-4500" required
-                   data-msg="Please enter a valid phone number.">
-          </div>
-        </div>
-        <!-- End Input -->
-      </div>
-
-      <!-- Input -->
-      <div class="js-form-message mb-6">
-        <label class="input-label">How can we help you?</label>
-        <div class="input-group">
-          <textarea class="form-control" rows="4" name="text" placeholder="Hi there, I would like to ..." aria-label="Hi there, I would like to ..." required
-                    data-msg="Please enter a reason."></textarea>
-        </div>
-      </div>
-      <!-- End Input -->
-
-      <div class="text-center">
-        <button type="submit" class="btn btn-primary btn-wide transition-3d-hover mb-4">Submit</button>
-        <p class="small">We'll get back to you in 1-2 business days.</p>
-      </div>
-    </form> #}
+    
     {{ craft.formie.renderForm('contactUs') }}
 
     <!-- End Contacts Form -->

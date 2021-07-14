@@ -1,0 +1,19 @@
+columnSuffix: jsniqbas
+contentColumnType: text
+fieldGroup: d82d6bb7-3c6f-4039-bf12-e1fc698e3f44 # contact
+handle: contactDiscription
+instructions: ''
+name: 'contact discription'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

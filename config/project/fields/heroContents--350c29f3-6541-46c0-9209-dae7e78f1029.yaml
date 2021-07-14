@@ -1,5 +1,6 @@
+columnSuffix: null
 contentColumnType: string
-fieldGroup: e9af3e97-4e9a-46de-a82f-8ffcc655e997 # hero matrix
+fieldGroup: e9af3e97-4e9a-46de-a82f-8ffcc655e997 # hero
 handle: heroContents
 instructions: ''
 name: 'hero contents'
@@ -8,6 +9,7 @@ settings:
   contentTable: '{{%matrixcontent_herocontents}}'
   maxBlocks: ''
   minBlocks: ''
+  propagationKeyFormat: null
   propagationMethod: all
 translationKeyFormat: null
 translationMethod: site

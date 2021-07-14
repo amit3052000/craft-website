@@ -1,12 +1,12 @@
-dateModified: 1626252453
+dateModified: 1626265467
 email:
   fromEmail: amitkum3052000@gmail.com
   fromName: 'new craft'
   transportType: craft\mail\transportadapters\Sendmail
 meta:
   __names__:
+    0b6678be-30e6-4351-a092-8a9cd57025bf: 'link url' # link url
     1de07346-7d54-4ab5-b4e0-3f5987678684: 'Contact Form' # Contact Form
-    3cf42257-b4f1-4a64-bc23-676336e8f1e1: Hero # Hero
     3e5c4262-8925-4e2d-a91a-9b658da80129: 'image caption' # image caption
     3f8aa932-ce4b-45fb-ac27-f147f912b23b: 'Nav Links 2' # Nav Links 2
     3f5952c6-a38d-4f0f-8eaf-7ce402f5db05: 'hero heading' # hero heading
@@ -15,7 +15,9 @@ meta:
     6ce24738-84e8-499b-b22e-a7eb1e57cd18: trial # trial
     7a2127ac-8a10-498f-acb7-39fa37dd24cf: 'Social Link' # Social Link
     7c45023e-873a-42ac-b026-ab45a253fd81: 'Hero Discription' # Hero Discription
+    7ef064a6-d796-4df8-97b8-2d3cf456824d: 'contact discription' # contact discription
     7f92e24a-58f0-4a81-91c1-130a3b0625d1: 'Nav Link 1' # Nav Link 1
+    8aab4f9d-41d7-434d-a509-c1e2dcfefb84: 'button class' # button class
     8dc546d9-5dcc-4a68-9a7a-adf101db7c3c: 'side head' # side head
     9a8a1e1c-ac90-4221-a60c-959864075fc2: 'About Us Discription' # About Us Discription
     13e8455c-e9f6-402f-98a4-54d3e82e3d79: 'new craft' # new craft
@@ -29,23 +31,19 @@ meta:
     76ef1619-9be1-45da-8a03-35c38368c967: heading # heading
     85dbd677-42da-4ab9-9f6c-4784bfccb466: Home # Home
     088a2159-9ef7-4cbd-97d5-a3e9a5fda0cb: 'Nav Links 2' # Nav Links 2
-    92c9b530-0bb7-4f69-9953-6bd31d9db3b4: 'About us Page' # About us Page
-    285e56e6-73f2-4798-a586-14aff8950cc7: 'About Us' # About Us
     350c29f3-6541-46c0-9209-dae7e78f1029: 'hero contents' # hero contents
     359e12db-890a-44a8-9216-f5b47724e477: Globals # Globals
     441dc40a-ed32-4992-8835-6a9f6e869473: Footer # Footer
     500b6cf6-4e37-44c5-92b7-968c52d5c131: 'Hero Heading' # Hero Heading
     2818ab72-be37-4eaa-b7ab-b77d87e3c3de: 'hero icons' # hero icons
-    4747dcd6-cf91-4535-828c-8af7be87f381: 'About Us' # About Us
     5338aab9-315f-43b2-8d8c-1eb2e1544020: 'About Us Heading' # About Us Heading
     7732d4c6-60ca-4685-b2f1-275f7ef7e637: 'Nav Links 1' # Nav Links 1
     7942c794-3e4e-4ced-af2b-49426c3a9bc9: heading # heading
-    8735d7fa-f19f-428a-a60d-57509a50363a: 'Hero Section' # Hero Section
-    09853f07-331b-4464-900b-17c70dcbad5d: 'Hero Section Matrix' # Hero Section Matrix
     50483d05-e9b3-4ad7-8621-c05e3acb82da: 'Social Links' # Social Links
     80049ad2-6b4e-4794-a19a-83fb555715b3: 'Nav Title' # Nav Title
     24289960-f324-4abe-a908-13985313def8: 'Social Links' # Social Links
     38665262-19b0-444a-be54-43f393887140: 'Nav Links 2' # Nav Links 2
+    a6ef481e-bced-422b-a564-c6ba9b897fbd: 'hero links' # hero links
     a81dd257-b832-4f63-94e5-4d3deede2e3d: 'Nav Links 3' # Nav Links 3
     a94c04c3-f89b-4f11-be33-1079598f82d9: discription # discription
     a628821e-6a8b-4184-848f-58d745d380f0: 'Rich Text' # Rich Text
@@ -53,6 +51,7 @@ meta:
     b49659a5-9b47-44e0-8826-17357114ca1b: icons # icons
     bd18aa1f-a7a3-4f6a-badc-d60a2f389e77: about # about
     bdd1b695-1bc2-4553-bab7-1a79a8fa69c5: Footer # Footer
+    c1d76441-2571-4c32-9505-d3d22b0e5c72: 'contact heading' # contact heading
     c5b9854d-337e-4751-85dc-4558a3c00eb3: Home # Home
     c71f750a-3461-4faa-938e-c904f63ca4c3: bottom # bottom
     ce0f265c-c320-4b70-b212-bb3e6901f1f0: 'Nav Links 3' # Nav Links 3
@@ -60,12 +59,13 @@ meta:
     cec4d737-a6a0-4e83-aecc-e1cd028e318e: 'hero image' # hero image
     cef29595-df5e-43be-b779-9ec5e160dbba: 'hero Image' # hero Image
     d5f1d19a-569c-4bd6-9599-42df2dce89f8: 'new craft' # new craft
+    d82d6bb7-3c6f-4039-bf12-e1fc698e3f44: contact # contact
+    d86dc7e7-50cc-4cdc-a891-2ad132855b61: 'hero title' # hero title
+    d4482a4b-2aff-4f26-bec0-ad44c555d7c2: 'link name' # link name
     dd13b668-050e-4b90-b743-b164aeb1d68c: Navlinks # Navlinks
     dfdd9868-dda4-4fed-9167-649c1773fd0d: 'Nav Links 1' # Nav Links 1
-    e8aa55dc-f7aa-4d47-9bd0-d560698ebf45: Hero # Hero
-    e9af3e97-4e9a-46de-a82f-8ffcc655e997: 'hero matrix' # hero matrix
+    e9af3e97-4e9a-46de-a82f-8ffcc655e997: hero # hero
     e47f99bc-6336-43d8-a073-c32b868b95e6: 'side bar' # side bar
-    eb2bb78c-b700-474f-a9c0-e93bd363818f: 'About us Page' # About us Page
     eff2ff27-51d9-4d83-a5bc-55ee7448fce8: 'Nav Link 2' # Nav Link 2
     f3fe1861-c40d-4c1e-a192-5e8f552e4ad9: New # New
     f1221d17-7f54-4435-b173-f6bbaa63f091: 'Footer Heading' # Footer Heading

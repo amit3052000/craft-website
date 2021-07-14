@@ -17,6 +17,7 @@ fieldLayouts:
         sortOrder: 1
 fields:
   b49659a5-9b47-44e0-8826-17357114ca1b: # icons
+    columnSuffix: null
     contentColumnType: string
     fieldGroup: null
     handle: icons
