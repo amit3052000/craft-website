@@ -1,0 +1,110 @@
+field: b84ff370-f477-4eb6-a805-c07b76e72ea8 # nav links
+fieldLayouts:
+  db02f9bc-cee8-47e7-a3ee-0ea91c2c23f7:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 8b76c14b-f836-4fc4-9337-f52ae6ee6bf5 # link name
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 3c36ae44-a1af-4adb-bdaf-e74fb3e0265b # link url
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 21554788-2d72-4e5d-8fd9-64e8038ff0be # i class
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  3c36ae44-a1af-4adb-bdaf-e74fb3e0265b: # link url
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: linkUrl
+    instructions: ''
+    name: 'link url'
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      limit: '1'
+      localizeRelations: false
+      selectionLabel: ''
+      showSiteMenu: true
+      source: null
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
+  8b76c14b-f836-4fc4-9337-f52ae6ee6bf5: # link name
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: linkName
+    instructions: ''
+    name: 'link name'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  21554788-2d72-4e5d-8fd9-64e8038ff0be: # i class
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: iClass
+    instructions: ''
+    name: 'i class'
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      cleanupHtml: true
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: ''
+      purifyHtml: '1'
+      redactorConfig: ''
+      removeEmptyTags: '1'
+      removeInlineStyles: '1'
+      removeNbsp: '1'
+      showHtmlButtonForNonAdmins: ''
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+handle: navrow1
+name: navRow1
+sortOrder: 1

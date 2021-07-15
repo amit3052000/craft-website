@@ -1,0 +1,66 @@
+field: b84ff370-f477-4eb6-a805-c07b76e72ea8 # nav links
+fieldLayouts:
+  fbb2a70a-13c1-4d8a-8bdb-38796e1ddf5c:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: eac634f2-3146-44c3-bd9f-e80805a049bf # link name
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 2c1ace86-d07a-491c-adb9-294c1dd23bbb # link Url
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  2c1ace86-d07a-491c-adb9-294c1dd23bbb: # link Url
+    columnSuffix: null
+    contentColumnType: string(255)
+    fieldGroup: null
+    handle: linkUrl
+    instructions: ''
+    name: 'link Url'
+    searchable: false
+    settings:
+      maxLength: '255'
+      placeholder: null
+      types:
+        - url
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Url
+  eac634f2-3146-44c3-bd9f-e80805a049bf: # link name
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: linkName
+    instructions: ''
+    name: 'link name'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: navRow2
+name: 'nav row2'
+sortOrder: 2

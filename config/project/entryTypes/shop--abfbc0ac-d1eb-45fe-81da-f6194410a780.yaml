@@ -1,5 +1,5 @@
 fieldLayouts:
-  42927edb-b992-458a-a442-686c721e76c8:
+  eb7027ec-d265-4aa7-8cf8-c13093f81b87:
     tabs:
       -
         elements:
@@ -26,31 +26,13 @@ fieldLayouts:
             type: craft\fieldlayoutelements\EntryTitleField
             warning: null
             width: 100
-          -
-            fieldUid: 80049ad2-6b4e-4794-a19a-83fb555715b3 # Nav Title
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-          -
-            fieldUid: eff2ff27-51d9-4d83-a5bc-55ee7448fce8 # Nav Link 2
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
         name: Content
         sortOrder: 1
-handle: navLinks2
-hasTitleField: true
-name: 'Nav Links 2'
-section: 38665262-19b0-444a-be54-43f393887140 # Nav Links 2
+handle: shop
+hasTitleField: false
+name: Shop
+section: 159ee58e-3e8e-4b22-8eda-f22d72cd39e5 # Shop
 sortOrder: 1
-titleFormat: null
+titleFormat: '{section.name|raw}'
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

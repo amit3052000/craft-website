@@ -1,11 +1,12 @@
+defaultPlacement: end
 enableVersioning: true
-handle: navLinks2
-name: 'Nav Links 2'
+handle: shop
+name: Shop
 propagationMethod: all
 siteSettings:
   d5f1d19a-569c-4bd6-9599-42df2dce89f8: # new craft
     enabledByDefault: true
-    hasUrls: false
+    hasUrls: true
     template: null
-    uriFormat: null
-type: channel
+    uriFormat: shop
+type: single

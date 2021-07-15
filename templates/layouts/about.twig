@@ -1,0 +1,86 @@
+{% extends "index" %}
+{% block content %}
+    <!-- About Section -->
+<div class="container">
+  <h3>{{ entry.aboutUsHeading }}</h3>
+
+  <div class="row mb-5">
+    <div class="col-md-3 order-md-2 mb-3 mb-md-0">
+      <div class="pl-md-4">
+        <ul class="list-unstyled list-article">
+          <li>
+            {% for block in entry.sideBar %}
+              {% switch block.type %}
+                {% case 'sideHead' %}
+                  <span class="h5 d-block">{{ block.heading }}</span>
+                {% case 'sideBottom' %}
+                  <span class="d-block font-size-1">{{ block.bottom }}</span>
+              {% endswitch %}
+            {% endfor %}
+            
+          </li>
+          <li>
+            <ul class="list-inline">
+              {% for social_link in entry.socialLinks %}
+                <li class="list-inline-item">
+                  <a class="icon icon-xs icon-soft-dark icon-circle" href="{{  social_link.socialLink }}" data-toggle="tooltip" data-placement="top" title="Capsule on Facebook">
+                    <i class="{{  social_link.iconclass }}"></i>
+                  </a>
+                </li>
+              {% endfor %}
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="col-md-9">
+      <div class="mb-5">
+        {{ entry.aboutUsDiscription	 }}
+        {# <div class="collapse" id="collapseLinkDescription">
+          <p>We're based in Manchester, United Kingdom, a city with a creative heart that was founded on science and industry and the birthplace of the modern computer.</p>
+        </div> #}
+        {# <a class="link-collapse" data-toggle="collapse" href="#collapseLinkDescription" role="button" aria-expanded="false" aria-controls="collapseLinkDescription">
+          <span class="link-collapse-default">Read more <i class="fas fa-angle-down fa-sm ml-1"></i></span>
+          <span class="link-collapse-active">Read less <i class="fas fa-angle-up fa-sm ml-1"></i></span>
+        </a> #}
+      </div>
+
+      <div id="fancyboxGallery">
+        <div class="row mx-n2">
+          
+          {% for image in entry.aboutUsImage %}
+          <div class="col-4 col-sm px-2 mb-3 mb-sm-0">
+            <a class="js-fancybox media-viewer" href="javascript:;"
+               data-hs-fancybox-options='{
+                 "selector": "#fancyboxGallery .js-fancybox",
+                 "speed": 700
+               }'
+               data-src="{{ image.url }}"
+               data-caption="Front in frames - image #01">
+              <img class="img-fluid rounded" src="{{ image.url }}" alt="Image Description">
+              
+              <span class="media-viewer-container">
+                <span class="media-viewer-icon">
+                  <i class="fas fa-plus media-viewer-icon-inner"></i>
+                </span>
+              </span>
+            </a>
+          </div>
+          {% endfor %}
+
+
+        <img class="js-fancybox d-none" alt="Image Description"
+             data-hs-fancybox-options='{
+               "selector": "#fancyboxGallery .js-fancybox",
+               "speed": 700
+             }'
+             data-src="{{ siteUrl }}assests/img/900x900/img2.jpg"
+             data-caption="Front in frames - image #06">
+      </div>
+    </div>
+  </div>
+  <!-- End Row -->
+</div>
+<!-- About Section -->
+{% endblock %}

@@ -81,16 +81,12 @@
 
 
     {# header goes here #}
-    {% include "/layouts/header" %}
+    {% include "/partials/nav/header" %}
 
-    {% include "/layouts/hero" %}
+    {% block content %}
 
-    {% include "/partials/aboutus" %}
-
-    {% include "/partials/blogs" %}
-
-    {% include "/partials/contact" %}
-
+    {% endblock %}
+    
     {% include "/partials/nav/footer" %}
 
     

@@ -1,4 +1,3 @@
-{% set footer_section = craft.entries().section('footer').one() %}
 
 
 <footer class="container space-2">
@@ -6,7 +5,7 @@
   <div class="row mb-11">
     <div class="col-md-3 mb-5 mb-md-0">
       <div class="mb-4">
-        <h5>{{  footer_section.footerHeading }}</h5>
+        <h5>{{  footer.footerHeading }}</h5>
       </div>
 
       <a class="btn btn-icon btn-indigo rounded-circle mr-2" href="#">
@@ -20,11 +19,17 @@
     <div class="col-sm-4 col-md-3 mb-3 mb-sm-0">
       <!-- Nav Links -->
       <ul class="nav nav-sm nav-x-0 flex-column">
-        {% for nav_link in footer_section.navLinks1 %}
+        {% for nav in footer.navLinks %}
+          {% if nav.type == 'navrow1' %}
+            {% set dist = nav.linkUrl %}
+            {% for link in dist %}
+
           <li class="nav-item">
-            <a class="nav-link" href="{{ nav_link.navLink1 }}">{{ nav_link.navTitle }}</a>
+            <a class="nav-link" href="{{ link.url }}">{{ nav.linkName }}{{ nav.iClass }}</a>
           </li>
         {# <li class="nav-item"><a class="nav-link" href="#">Careers <span class="badge badge-success badge-pill ml-1">We're hiring</span></a></li> #}
+            {% endfor %}
+          {% endif %}
         {% endfor %}
       </ul>
       <!-- End Nav Links -->
@@ -33,10 +38,12 @@
     <div class="col-sm-4 col-md-3 mb-3 mb-sm-0">
       <!-- Nav Links -->
       <ul class="nav nav-sm nav-x-0 flex-column">
-        {% for nav_link in footer_section.navLinks2 %}
+        {% for nav in footer.navLinks %}
+          {% if nav.type == 'navRow2' %}
           <li class="nav-item">
-            <a class="nav-link" href="{{ nav_link.navLink2 }}">{{ nav_link.navTitle }}</a>
+            <a class="nav-link" href="{{ nav.linkUrl }}">{{ nav.linkName }}</a>
           </li>
+          {% endif %}
         {% endfor %}
       </ul>
       <!-- End Nav Links -->
@@ -45,30 +52,16 @@
     <div class="col-sm-4 col-md-3 mb-3 mb-sm-0">
       <!-- Nav Links -->
       <ul class="nav nav-sm nav-x-0 flex-column">
-        <li class="nav-item">
-          <a class="nav-link" href="#" target="_blank">
-            Pricing
-            <i class="fas fa-external-link-alt fa-xs ml-1"></i>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" target="_blank">
-            Help
-            <i class="fas fa-external-link-alt fa-xs ml-1"></i>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" target="_blank">
-            Terms & Conditions
-            <i class="fas fa-external-link-alt fa-xs ml-1"></i>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" target="_blank">
-            Privacy & Policy
-            <i class="fas fa-external-link-alt fa-xs ml-1"></i>
-          </a>
-        </li>
+        {% for nav in footer.navLinks %}
+          {% if nav.type == 'navRow3' %}
+            <li class="nav-item">
+              <a class="nav-link" href="{{ nav.linkUrl }}" target="_blank">
+                {{ nav.linkName }}
+                <i class="fas fa-external-link-alt fa-xs ml-1"></i>
+              </a>
+            </li>
+          {% endif %}
+        {% endfor %}
       </ul>
       <!-- End Nav Links -->
     </div>
@@ -78,19 +71,20 @@
   <!-- Copyright -->
   <div class="row align-items-sm-center">
     <div class="col-sm-6 mb-4 mb-sm-0">
-      <p class="small mb-0">{{ footer_section.footerDisclaimer }}</p>
+      <p class="small mb-0">{{ footer.footerDisclaimer }}</p>
     </div>
 
     <div class="col-sm-6 text-sm-right">
       <!-- Social Networks -->
       <ul class="list-inline mb-0">
-        {% for social_link in footer_section.socialLinks %}
+        {% for social_link in footer.socialLinks %}
           <li class="list-inline-item mb-2 mb-sm-0">
             <a class="btn btn-xs btn-icon btn-soft-indigo rounded-circle" href="{{  social_link.socialLink }}">
               <i class="{{ social_link.iconclass }}"></i>
             </a>
           </li>
         {% endfor %}
+        
       </ul>
       <!-- End Social Networks -->
     </div>

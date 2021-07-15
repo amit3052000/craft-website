@@ -1,12 +1,12 @@
 defaultPlacement: end
 enableVersioning: true
-handle: home
-name: Home
+handle: dummy2
+name: dummy2
 propagationMethod: all
 siteSettings:
   d5f1d19a-569c-4bd6-9599-42df2dce89f8: # new craft
     enabledByDefault: true
     hasUrls: true
-    template: layouts\home
-    uriFormat: __home__
+    template: null
+    uriFormat: dummy2
 type: single
